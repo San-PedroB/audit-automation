@@ -1,0 +1,40 @@
+Identity_ID,Zona_name,,,Gender,Age,Action,Track_ID,Time,Event_Audit,Gender_Audit,Age_Audit,Observation_A,Observation_B
+unknown,Atencion_Club,,,Male,28,Enter,51e8ac64-5b7e-450f-8a7f-f70d71f74716,2026-03-11 00:03:14,Bien,Bien,Bien,,
+unknown,Fila_Club,,,Male,28,Enter,51e8ac64-5b7e-450f-8a7f-f70d71f74716,2026-03-11 00:03:21,Bien,Bien,Bien,,
+unknown,Atencion_Club,,,Male,28,Exit,51e8ac64-5b7e-450f-8a7f-f70d71f74716,2026-03-11 00:03:21,Bien,Bien,Bien,,
+unknown,Fila_Club,,,Male,28,Exit,51e8ac64-5b7e-450f-8a7f-f70d71f74716,2026-03-11 00:03:46,Bien,Bien,Bien,,
+unknown,Fila_Club,,,Male,28,Enter,d7da18c5-f5cf-4a58-9633-71972980815c,2026-03-11 00:05:40,Bien,Bien,Bien,,
+unknown,Fila_Club,,,Male,28,Exit,d7da18c5-f5cf-4a58-9633-71972980815c,2026-03-11 00:07:06,Bien,Bien,Bien,,
+unknown,Fila_Club,,,Male,28,Enter,ce9b7ad1-8167-48f8-a9c9-65d274aa4e75,2026-03-11 00:09:22,Bien,Bien,Bien,,
+unknown,Fila_Club,,,Male,28,Exit,ce9b7ad1-8167-48f8-a9c9-65d274aa4e75,2026-03-11 00:09:43,Bien,Bien,Bien,,
+,Atencion_Club,,,,,,8d33,0:11:04,Mal,,,Evento no registrado,TRACK_ID desaparece
+,Atencion_Club,,,,,,15ad,0:11:04,Mal,,,Evento no registrado,TRACK_ID desaparece
+,Atencion_Club,,,,,,d683,0:11:04,Mal,,,Evento no registrado,TRACK_ID desaparece
+unknown,Fila_Club,,,Female,28,Enter,fbfd2f87-08bc-4b62-a5b3-16a1dd66b484,2026-03-11 00:11:49,Bien,Bien,Bien,,
+unknown,Fila_Club,,,Female,28,Exit,fbfd2f87-08bc-4b62-a5b3-16a1dd66b484,2026-03-11 00:12:00,Bien,Bien,Bien,,
+unknown,Fila_Club,,,Male,28,Enter,fda8c251-820d-4f1a-b51a-9602f4ba015a,2026-03-11 00:14:25,Bien,Bien,Bien,,
+unknown,Fila_Club,,,Male,28,Exit,fda8c251-820d-4f1a-b51a-9602f4ba015a,2026-03-11 00:14:44,Bien,Bien,Bien,,
+ad93ba12-d513-4f5f-9657-89f57c812d8a,Atencion_Club,,,Male,28,Enter,97bc4955-0cdc-469a-baf8-318c2bacb0dc,2026-03-11 00:18:35,Bien,Bien,Bien,,
+ad93ba12-d513-4f5f-9657-89f57c812d8a,Atencion_Club,,,Male,28,Exit,97bc4955-0cdc-469a-baf8-318c2bacb0dc,2026-03-11 00:18:54,Bien,Bien,Bien,,
+unknown,Fila_Club,,,Male,28,Enter,ba79d331-f182-4a42-8a24-cf1c1bee4501,2026-03-11 00:24:50,Bien,Bien,Bien,,
+unknown,Fila_Club,,,Male,28,Exit,ba79d331-f182-4a42-8a24-cf1c1bee4501,2026-03-11 00:24:56,Bien,Bien,Bien,,
+,Atencion_Club,,,,,,5f3e,0:26:53,Mal,,,Evento no registrado,TRACK_ID desaparece
+unknown,Fila_Club,,,Male,45,Enter,8d2f15ce-52cf-4be8-b414-9b958b3ee4a2,2026-03-11 00:27:02,Bien,Bien,Bien,,
+unknown,Fila_Club,,,Male,45,Exit,8d2f15ce-52cf-4be8-b414-9b958b3ee4a2,2026-03-11 00:27:15,Bien,Bien,Bien,,TRACK_ID desaparece
+unknown,Atencion_Club,,,Male,45,Enter,b14439eb-0d94-43e7-990e-9fd9e30691e6,2026-03-11 00:27:33,Bien,Bien,Bien,,
+,Atencion_Club,,,,,,f24d,0:27:56,Mal,,,Evento no registrado,TRACK_ID desaparece
+4c7a08ef-67ad-4a08-be9f-6354107bcaec,Fila_Club,,,Male,28,Enter,105a3aa8-67bd-423e-a3e8-a5bb360822f0,2026-03-11 00:28:05,Bien,Bien,Bien,,
+unknown,Atencion_Club,,,Male,45,Exit,b14439eb-0d94-43e7-990e-9fd9e30691e6,2026-03-11 00:28:07,Mal,Bien,Bien,,TRACK_ID desaparece
+4c7a08ef-67ad-4a08-be9f-6354107bcaec,Fila_Club,,,Male,28,Exit,105a3aa8-67bd-423e-a3e8-a5bb360822f0,2026-03-11 00:28:16,Bien,Bien,Bien,,
+,Atencion_Club,,,,,,3a93,0:28:33,Mal,,,Evento no registrado,TRACK_ID desaparece
+,Atencion_Club,,,,,,bf29,0:28:35,Mal,,,Evento no registrado,TRACK_ID desaparece
+unknown,Atencion_Club,,,Male,18,Enter,65564e97-8950-4905-9eb0-732e0247686b,2026-03-11 00:28:31,Bien,Bien,Bien,,
+unknown,Fila_Club,,,Male,28,Enter,2ccf943b-36d9-434d-be1c-e20539c3b2b2,2026-03-11 00:29:35,Bien,Bien,Bien,,
+unknown,Fila_Club,,,Male,28,Exit,2ccf943b-36d9-434d-be1c-e20539c3b2b2,2026-03-11 00:29:41,Bien,Bien,Bien,,
+unknown,Atencion_Club,,,Male,18,Exit,65564e97-8950-4905-9eb0-732e0247686b,2026-03-11 00:29:44,Bien,Bien,Bien,,
+a04bbf00-6b82-4f6a-9491-5c46d8ff58f1,Atencion_Club,,,Female,45,Enter,3987b227-abea-429b-9c5f-68da4996557a,2026-03-11 00:29:54,Bien,Bien,Bien,,
+a04bbf00-6b82-4f6a-9491-5c46d8ff58f1,Atencion_Club,,,Female,45,Exit,3987b227-abea-429b-9c5f-68da4996557a,2026-03-11 00:30:15,Bien,Bien,Bien,,
+,Atencion_Club,,,,,,0d68,0:32:29,Mal,,,Evento no registrado,TRACK_ID desaparece
+unknown,Atencion_Club,,,Female,18,Enter,38a87d73-f47c-48c9-8c68-57ad2a8e9e72,2026-03-11 00:35:54,Bien,Bien,Bien,,
+unknown,Atencion_Club,,,Female,18,Exit,38a87d73-f47c-48c9-8c68-57ad2a8e9e72,2026-03-11 00:36:07,Bien,Bien,Bien,,
+,,,,,,,,END,,,,,

@@ -1,0 +1,13 @@
+# Entornos Virtuales
+venv/
+env/
+__pycache__/
+
+# Archivos de depuración y logs
+club_debug.csv
+club_output.csv
+club_output.txt
+*.log
+
+# Opcional: Si no quieres subir los CSV originales o muy grandes porque Github no los admite (comentado)
+# *.csv

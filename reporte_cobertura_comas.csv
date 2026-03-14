@@ -1,0 +1,4 @@
+Zona,Eventos registrados por el sistema,Eventos no registrados por el sistema,Total eventos,Precicion de Eventos,% Presicion de Eventos,Precision de Genero,% Precision de Genero,Precicion de Edad,% Precicion de Edad,Identity unknown,% Identity unknown,Cobertura Genero,% Cobertura Genero,Cobertura de Edad,% Cobertura de Edad,Cobertura de Identity,% Cobertura de Identity
+Atencion_Club,12,8,20,11,55.00%,12,100.00%,12,100.00%,8,66.67%,12,100.00%,12,100.00%,12,100.00%
+Fila_Club,18,0,18,18,100.00%,18,100.00%,18,100.00%,16,88.89%,18,100.00%,18,100.00%,2,11.11%
+TOTAL,30,8,38,29,76.32%,30,100.00%,30,100.00%,24,80.00%,30,100.00%,30,100.00%,14,46.67%
