@@ -1,6 +1,6 @@
 # Documentación del Proyecto de Procesamiento de Eventos de Video Analytics
 
-Este documento detalla todas las reglas de negocio, transformaciones de datos y cálculos implementados en el script de Python (`import pandas as pd.py`) diseñado para procesar el archivo CSV de datos (`que te pasa.csv`).
+Este documento detalla todas las reglas de negocio, transformaciones de datos y cálculos implementados en el script de Python (`calculo_metricas_video.py`) diseñado para procesar el archivo CSV de datos (`datos_auditoria_video.csv`).
 
 ## 1. Objetivo Principal
 Analizar un conjunto de datos obtenidos de eventos de tráfico en diferentes zonas, separando los eventos registrados por el sistema frente a los manuales, y emitiendo un reporte tabular con los cálculos matemáticos requeridos sobre precisión de reconocimientos (Auditorías) y coberturas.
@@ -42,11 +42,40 @@ Todas estas métricas se calculan individualmente *Por Zona*, y por último se p
 10. **Cobertura de Identity**: La diferencia matemática al restarle al total absoluto de la zona (`Total eventos`) todos los campos que dijeron ser "unknown" en `Identity_ID`.
     *   **% Cobertura de Identity:** (`Cobertura de Identity` ÷ `Eventos registrados por el sistema`) * 100.
 
----
+## 4. Estructura del Reporte Automatizado (Excel)
 
-## 4. Archivos Producidos
+A diferencia de los archivos CSV planos, el reporte final se genera en un formato Excel enriquecido con gráficos y tablas formateadas.
 
-El proceso ejecutará sus iteraciones y finalmente expelerá los siguientes reportes tabulares:
+### 4.1. Uso de Plantilla (Template)
+El script busca un archivo llamado `Template Tabla Maestra.xlsx` en la carpeta de la auditoría.
+- Si lo encuentra: Inyecta los datos calculados a partir de la fila 3, preservando los logos, colores de cabecera y celdas combinadas del usuario.
+- Si no lo encuentra: Genera un archivo estándar con formato de tabla de Excel.
 
-1.  **reporte_cobertura.csv**: Formateado utilizando separador `\t` (Tabulación). Facilita profundamente hacer *Copy* & *Paste* de su contenido en crudo a entornos como Excel o Google Sheets, alineando todo a la perfección.
-2.  **reporte_cobertura_comas.csv**: Un respaldo del archivo anterior, pero utilizando separador de comas estándar `,`, por si el archivo tabulado entra en conflictos con procesadores de bases de datos.
+### 4.2. Visualizaciones (Estilo Informe Crystal)
+Se generan tres tipos de visualizaciones dinámicas utilizando Matplotlib:
+1.  **Gráfico Global de Zonas**: Comparativa de Total Eventos vs Precisión de Eventos para todas las zonas auditadas.
+2.  **Gráfico de Totales**: Resumen consolidado del desempeño general (Registrados, No Registrados, Precisión).
+3.  **Análisis por Cámara**: Agrupación inteligente donde cada cámara tiene su propia sección con:
+    *   Un gráfico de barras con todas sus zonas.
+    *   Una tabla detallada con métricas por zona y un **TOTAL por cámara**.
+
+### 4.3. Estética Corporativa
+El diseño emula el **Informe Crystal**:
+- **Colores**: Navy (`#1B2A4A`) para volumen de eventos y Rojo (`#C0392B`) para precisión.
+- **Formato**: Fondo blanco limpio, leyendas centradas en la parte superior y tablas con cabeceras azul marino y filas alternas.
+
+## 5. Ejecución del Script
+
+Para procesar una auditoría, se utiliza la línea de comandos (CLI):
+
+```bash
+python calculo_metricas_video.py -e "Nombre Empresa" -f "DD-MM"
+```
+- `-e`: Nombre de la carpeta del cliente (ej. Casino Talca).
+- `-f`: Subcarpeta de la fecha (ej. 11-03).
+
+## 6. Archivos Producidos
+
+1.  **Reporte_Auditoria_Maestro.xlsx**: El producto final con 3 hojas: `TABLA MAESTRA`, `Gráficos` y `Por Cámara`.
+2.  **reporte_cobertura.csv**: Versión técnica de respaldo con separador de tabulaciones.
+3.  **reporte_cobertura_comas.csv**: Versión técnica de respaldo con separador de comas.

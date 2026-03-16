@@ -1,0 +1,336 @@
+Total páginas: 18
+
+===== PÁGINA 1 =====
+Contexto:
+Se realizó una auditoría en la tienda Crystal, la cual opera con el sistema In-Store Tracking,
+orientado a la detección y seguimiento de clientes mediante análisis de video y generación
+de eventos.
+La revisión incluyó 8 sensores que cubren las principales áreas de la tienda, incluyendo
+líneas de conteo (Zona de Entrada, Entrada 2 y Tráfico Externo) y zonas de permanencia
+(véase Imagen 1).
+El análisis considera las jornadas del 06 y 13 de enero de 2026. Los resultados se
+presentan organizados por tipo de zona, con el objetivo de evaluar el desempeño del
+sistema en cada área de manera independiente.
+Imagen 1
+
+===== PÁGINA 2 =====
+Resumen ejecutivo:
+Se auditó la tienda Crystal los días 06 y 13 de enero de 2026, revisando un total de 647 y
+658 eventos, respectivamente. La precisión global se mantuvo en niveles óptimos de
+desempeño, pasando de 575/647 (88,87 %) a 577/658 (87,69 %), lo que representa una
+disminución de 1,18 p.p.
+En las líneas de conteo (auditadas el 13/01), la Zona de Entrada alcanzó 49/53 (92,45 %),
+Tráfico Externo 30/45 (66,67 %) y Tráfico Externo (L) 59/60 (98,33 %). Las diferencias se
+asocian principalmente a omisiones en cruces simultáneos observados en video, donde el
+sistema mantiene el seguimiento de una persona y no registra la totalidad de los cruces
+concurrentes.
+En cuanto a la precisión de errores de conteo: se validó la consistencia del sistema
+mediante el análisis de Error, la desviación disminuyó de un 8,87% el 06/01 a un nivel
+marginal de 1,68% el 13/01 (Ver gráfico 1).
+En zonas de permanencia, la Zona 4 mejoró de 73/111 (65,77 %) a 89/100 (89,00 %),
+mientras que la Zona 5 se mantuvo estable en 62/66 (93,94 %) y 94/100 (94,00 %). Por el
+contrario, la Zona 3 disminuyó de 106/113 (93,81 %) a 82/100 (82,00 %) y la Zona 6 de
+68/69 (98,55 %) a 75/100 (75,00 %). Estas variaciones se asocian a la generación de
+eventos por mobiliario fijo ("roperos") ubicados dentro del área auditada, a los cuales el
+sistema asignó TRACK_ID como entidades válidas.
+La Cámara 8 alcanzó una precisión del 100,00 % el 06/01 (71/71) y del 99,00 % el 13/01
+(99/100). Se identificaron eventos derivados de la configuración de las zonas: registros
+vinculados al personal de caja (8 en la primera auditoría y 5 en la segunda), 11 registros por
+movimientos en el límite de Atención Caja y 6 transiciones reiteradas entre Atención Caja y
+Autopago debido a la proximidad entre delimitaciones. Exceptuando una omisión puntual en
+la zona de Autopago el día 13/01, estas situaciones corresponden a efectos de
+configuración y no a fallas de detección.
+Respecto del atributo Identity, el estado Unknown aumentó de 266/647 (41,11%) a 296/658
+(44,98 %), concentrándose principalmente en las Zonas 4 (58,00 %), 5 (51,00 %) y 6 (67,00
+%) durante la segunda jornada.
+En términos generales, el sistema presenta un desempeño adecuado, concentrándose las
+oportunidades de mejora en ajustes de delimitación de zonas y la exclusión de objetos
+fijos dentro del encuadre.
+
+===== PÁGINA 3 =====
+Metodología de la auditoría:
+Se realizaron dos auditorías, en las jornadas del 06 y 13 de enero de 2026, considerando
+las cámaras y zonas incluidas dentro del alcance definido para la revisión (líneas de conteo
+y zonas de permanencia).
+Las auditorías consistieron en contrastar el video con la lista de eventos generados por el
+sistema, evaluando cada registro de forma individual. Un evento se clasificó como correcto
+cuando el registro se correlacionó con lo observado en video dentro de la zona y
+temporalidad correspondiente, y como incorrecto cuando no se observó, fue omitido o se
+generó por efecto de configuración.
+La precisión de eventos se calculó como:
+Precisión = Eventos correctos / Total de eventos auditados
+Adicionalmente, se analizó el comportamiento del atributo Identity, identificando registros en
+estado Unknown. Este análisis se presenta de forma independiente a la precisión de
+eventos.
+Líneas de conteo:
+Análisis de Error de Conteo TDI (06/01/2026 – 13/01/2026)
+Este indicador mide la consistencia entre entradas y salidas captadas por el sistema.
+Gráfico 1
+
+===== PÁGINA 4 =====
+Fecha Entradas Salidas Margen de Error (%)
+06/01/2026 1139 1038 8,87 %
+13/01/2026 653 642 1,68 %
+Tabla 1
+En la jornada del 06/01/2026 ingresaron 1.139 personas y salieron 1.038. Por su parte, el
+13/01/2026 ingresaron 653 personas y salieron 642.
+La observación de la desviación muestra que el margen de error se redujo del 8,87 % al
+1,68 % entre ambas fechas. Esta mejora indica que el sistema logró una mayor consistencia
+técnica al ajustar el balance de personas que entran y salen de la tienda.
+Zona de Entrada
+La línea de Entrada fue auditada en la jornada del 13/01/2026. Se registraron 53 eventos,
+con 49 correctos, alcanzando una precisión de 92,45%.
+Las inconsistencias observadas corresponden a ingresos reales donde las personas
+cruzaron la línea de conteo, pero el sistema no registró automáticamente el evento.
+Asimismo, el atributo Identity presentó 16 registros en estado Unknown en la jornada
+auditada (ver Tabla 12).
+Tráfico Externo
+La línea de Tráfico Externo fue auditada en la jornada del 13/01/2026. Se registraron 45
+eventos, con 30 correctos, alcanzando una precisión de 66,67%.Las inconsistencias
+observadas corresponden a 15 cruces de la línea de conteo que fueron identificados en
+video, pero no detectados por el sistema.
+Asimismo, el atributo Identity presentó 7 registros en estado Unknown en la jornada
+auditada (ver Tabla 12).
+Tráfico Externo (L)
+La línea de Tráfico Externo (L) fue auditada en la jornada del 13/01/2026. Se registraron 60
+eventos, con 59 correctos, alcanzando una precisión de 98,33%.
+El evento clasificado como incorrecto corresponde a un cruce de la línea de conteo que no
+fue detectado automáticamente por el sistema.
+Asimismo, el atributo Identity presentó 21 registros en estado Unknown en la jornada
+auditada (ver Tabla 12).
+
+===== PÁGINA 5 =====
+Imagen 2
+Entrada 2
+La línea de Entrada 2 fue auditada únicamente en la jornada del 06/01/2026. Se registraron
+33 eventos, con 27 correctos, alcanzando una precisión de 81,81 %. Las inconsistencias
+se asocian a omisiones puntuales de ingresos reales.
+Asimismo, el atributo Identity presentó 25 registros en estado Unknown, lo que representa
+el 75,75 % de su volumen (ver Tabla 12).
+
+===== PÁGINA 6 =====
+Precisión de eventos - Líneas de conteo (13/01/2026)
+A continuación, se presenta la precisión de eventos por línea de conteo.
+Eventos
+Línea de conteo Fecha Eventos auditados Precisión (%)
+correctos
+Entrada 13/01/2026 53 49 92,45 %
+Tráfico
+13/01/2026 45 30 66,67 %
+Externo
+Tráfico
+13/01/2026 60 59 98,33 %
+Externo (L)
+Entrada 2 06/01/2026 33 27 81,81 %
+TOTAL -- 191 165 86,39 %
+Tabla 2
+En términos consolidados, las líneas de conteo registraron 165 eventos correctos sobre un
+total de 191 eventos auditados, alcanzando una precisión global de 86,39 %.
+Gráfico 2
+
+===== PÁGINA 7 =====
+Zonas de Permanencia:
+Cámara 02
+Imagen 3
+La Cámara 2 considera la Zona 2, auditada el 06/01/2026.
+En dicha jornada se registraron 184 eventos, con 168 eventos correctos, alcanzando una
+precisión de 91,31%. De los eventos incorrectos, 15 corresponden a la asignación de
+TRACK_ID a un ropero ubicado en la zona de permanencia.
+Al no contar con auditoría comparativa en la segunda fecha de análisis, estos resultados se
+presentan con carácter descriptivo.
+Fecha Eventos correctos Eventos totales Precisión (%)
+06/01/2026 168 184 91,31%
+Tabla 3
+
+===== PÁGINA 8 =====
+Cámara 03
+Imagen 4
+La Cámara 3 considera la Zona 3, auditada en ambas fechas de análisis.
+Se registraron 113 y 100 eventos, con 106 y 82 eventos correctos, alcanzando precisiones
+de 93,81% y 82,00%, respectivamente. En la segunda auditoría, las inconsistencias
+observadas estuvieron asociadas a la asignación de TRACK_ID a un ropero ubicado dentro
+de la zona de permanencia, el cual fue interpretado por el sistema como una entidad válida
+y generó 18 eventos dentro del total evaluado.
+La variación entre ambas fechas fue de una disminución de 11,81 puntos porcentuales.
+Asimismo, el atributo Identity presentó 33 y 39 registros en estado Unknown en la primera y
+segunda jornada, respectivamente (ver Tabla 12).
+Fecha Eventos correctos Eventos totales Precisión (%)
+06/01/2026 106 113 93,81 %
+13/01/2026 82 100 82,00 %
+Tabla 4
+
+===== PÁGINA 9 =====
+Cámara 04
+Imagen 5
+La Cámara 4 considera la Zona 4, auditada en ambas fechas de análisis.
+Se registraron 111 y 100 eventos, con 73 y 89 eventos correctos, alcanzando precisiones de
+65,77% y 89,00%, respectivamente. En la primera auditoría, las inconsistencias observadas
+estuvieron asociadas principalmente a la asignación de Identity en situaciones de cruce y
+superposición de personas, las cuales generaron 22 eventos incorrectos, mientras que en la
+segunda se observó la asignación de TRACK_ID a un ropero ubicado en la zona de
+permanencia, que generó 11 eventos dentro del total evaluado.
+La diferencia entre ambas fechas corresponde a un aumento de 23,23 puntos porcentuales.
+Asimismo, el atributo Identity presentó 45 y 58 registros en estado Unknown en la primera y
+segunda jornada, respectivamente (ver Tabla 12).
+Fecha Eventos correctos Eventos totales Precisión (%)
+06/01/2026 73 111 65,77 %
+13/01/2026 89 100 89,00 %
+Tabla 5
+
+===== PÁGINA 10 =====
+Cámara 05
+Imagen 6
+La Cámara 5 considera la Zona 5, auditada en ambas fechas de análisis.
+Se registraron 66 y 100 eventos, con 62 y 94 eventos correctos, alcanzando precisiones de
+93,94% y 94,00%, respectivamente. En la segunda auditoría se observó, en 4
+oportunidades, la generación de TRACK_ID por una imagen publicitaria cercana a la zona
+de permanencia. Como oportunidad de mejora, se sugiere incorporar una zona de
+exclusión en el contorno de dicha imagen publicitaria.
+La variación entre ambas fechas corresponde a un aumento de 0,06 puntos porcentuales.
+Asimismo, el atributo Identity presentó 30 y 51 registros en estado Unknown en la primera y
+segunda jornada, respectivamente (ver Tabla 12).
+Fecha Eventos correctos Eventos totales Precisión (%)
+06/01/2026 62 66 93,94%
+13/01/2026 94 100 94,00%
+Tabla 6
+
+===== PÁGINA 11 =====
+Cámara 06
+Imagen 7
+Se registraron 69 y 100 eventos, con 68 y 75 eventos correctos, alcanzando precisiones de
+98,55% y 75,00%, respectivamente. En la segunda auditoría se observó la generación de
+TRACK_ID por un ropero ubicado dentro del área auditada, el cual produjo 22 eventos
+dentro del total evaluado.
+La variación entre ambas fechas corresponde a una disminución de 23,55 puntos
+porcentuales. Asimismo, el atributo Identity presentó 35 y 67 registros en estado Unknown
+en la primera y segunda jornada, respectivamente (ver Tabla 12).
+Fecha Eventos correctos Eventos totales Precisión (%)
+06/01/2026 68 69 98,55 %
+13/01/2026 75 100 75,00 %
+Tabla 7
+
+===== PÁGINA 12 =====
+Cámara 08
+Imagen 8
+La Cámara 8 fue auditada en ambas fechas. En la jornada del 06/01/2026 se evaluó como
+un único bloque, registrándose 71 eventos, mientras que el 13/01/2026 se desagregó en
+Atención Caja y Autopago, sumando 100 eventos. En la primera jornada la precisión
+técnica fue del 100,00 %, mientras que en la segunda se situó en el 99,00 %.
+A lo largo del análisis, se identificaron eventos derivados de la configuración de las zonas.
+En la primera auditoría se observaron 8 registros asociados al personal de caja debido al
+solapamiento de la zona de permanencia con el mostrador. En la segunda auditoría se
+identificaron 5 casos similares, además de 11 eventos generados por pequeños
+movimientos en el límite de la zona Atención Caja y 6 transiciones reiteradas entre Atención
+Caja y Autopago por la proximidad entre ambas delimitaciones.
+A diferencia de estas situaciones, que corresponden a efectos de configuración y no a fallas
+de detección, se registró una omisión puntual en la zona de Autopago durante la segunda
+jornada. Se sugiere revisar y ajustar los contornos de las zonas de permanencia para
+reducir eventos no representativos de la dinámica operativa real.
+Tabla comparativa - Cámara 8 (Consolidado)
+Fecha Eventos totales Precisión (%)
+06/01/2026 71 100,00 %
+13/01/2026 100 99,00 %
+
+===== PÁGINA 13 =====
+Tabla 8
+Desagregación - Auditoría 13/01/2026
+Zona Eventos totales Eventos Correctos Precisión (%)
+Atención Caja 86 86 100,00 %
+Autopago 14 13 92,86 %
+TOTAL 100 99 99,00 %
+Tabla 9
+Precisión de eventos - Zonas de permanencia
+Zona /
+06/01 Total Precisión 06/01 13/01 Total Precision 13/01
+Cámara
+Zona 02 184 91,31% - -
+Zona 03 113 93,81% 100 82,00%
+Zona 04 111 65,77% 100 89,00%
+Zona 05 66 93,94% 100 94,00%
+Zona 06 69 98,55% 100 75,00%
+Cámara 8 71 100,00% 100 99,00%
+TOTAL 614 89,25 % 500 87,80 %
+Tabla 10
+
+===== PÁGINA 14 =====
+Gráfico 3
+
+===== PÁGINA 15 =====
+Análisis del atributo Identity – Estado Unknown
+A nivel consolidado, el comportamiento del atributo Identity en estado Unknown por jornada
+se presenta a continuación:
+Identity
+Fecha Total Eventos % Unknown
+Unknown
+06/01/2026 647 266 41,11%
+13/01/2026 658 296 44,98%
+Tabla 11
+El detalle por zona y cámara se presenta en la Tabla 12.
+Zona / 13/01
+06/01 Registros 06/01 % 13/01 %
+Cámara Registros
+Zona 02 69 37,50 % — —
+Zona 03 33 29,20 % 39 39,00 %
+Zona 04 45 40,54 % 58 58,00 %
+Zona 05 30 45,45 % 51 51,00 %
+Zona 06 35 50,72 % 67 67,00 %
+Cámara 8 29 40,85 % 37 37,00 %
+Entrada 2 25 75,75 % — —
+Entrada
+— — 16 30,19 %
+(línea)
+Tráfico
+— — 7 15,56 %
+Externo
+Tráfico
+— — 21 35,00 %
+Externo (L)
+Total 266 41,11 % 296 44,98 %
+Tabla 12
+
+===== PÁGINA 16 =====
+Gráfico 4
+En términos consolidados, el porcentaje de Identity en estado Unknown aumentó de 41,11
+% a 44,98 % (+3,87 pp) entre jornadas.
+El incremento se concentra principalmente en zonas de permanencia y no impacta la
+precisión de eventos, correspondiendo al comportamiento del atributo Identity bajo las
+condiciones actuales de configuración.
+
+===== PÁGINA 17 =====
+Conclusiones
+Tras las auditorías realizadas los días 06 y 13 de enero de 2026, los resultados confirman
+que el sistema In-Store Tracking mantiene un desempeño operativo sólido y estable, con
+una precisión global que se situó en 88,87 % (575/647) durante la primera jornada y en
+87,69 % (577/658) en la segunda. Esta ligera variación de apenas −1,18 p.p. demuestra la
+consistencia del algoritmo en un entorno comercial real.
+El análisis destaca comportamientos muy positivos, como la notable mejora en la Zona 4,
+que alcanzó un 89,00 % de precisión, y la estabilidad de la Zona 5, que se mantuvo en
+niveles óptimos cercanos al 94,00 %. No obstante, se identificaron oportunidades de
+mejora específicas para elevar la calidad de los datos. En la Zona 05, se sugiere incorporar
+una zona de exclusión en el contorno de la imagen publicitaria para evitar detecciones no
+deseadas derivadas de la gráfica ambiental. Por su parte, la Zona 06 evidenció que la
+presencia de mobiliario alto ("roperos") genera eventos adicionales que podrían mitigarse
+mediante el ajuste de los parámetros de detección.
+Finalmente, la Cámara 8 mantuvo un alto desempeño técnico con precisiones del 100,00 %
+y 99,00 % respectivamente. Sin embargo, se observó que el sistema capta ocasionalmente
+los pies del personal tras el mostrador al aproximarse al límite del área auditada. Aunque la
+detección es técnicamente correcta, representa un falso positivo para el negocio, por lo que
+se requiere un ajuste de los polígonos de permanencia para asegurar que los registros
+correspondan exclusivamente a clientes. En conclusión, el sistema presenta un nivel de
+desempeño adecuado para su uso operativo y la toma de decisiones estratégicas,
+sustentado en una base de datos estable y confiable.
+Adicionalmente, se evaluó el balance de flujo, el 06/01 ingresaron 1.139 personas y salieron
+1.038, mientras que el 13/01 ingresaron 653 y salieron 642. La observación de la desviación
+indica que el margen de error se redujo del 8,87 % al 1,68 %
+Para efectos de consolidación histórica, a continuación se presenta el resumen comparativo
+de las auditorías realizadas, donde se observa la evolución del desempeño global del
+sistema en términos de eventos auditados y precisión total por fecha:
+Fecha de auditoría Total Eventos Eventos Correctos % Precisión Global
+06/01/2026 647 575 88,87 %
+13/01/2026 658 577 87,69 %
+Tabla 13
+
+===== PÁGINA 18 =====
+Gráfico 5
+La precisión global presentó una variación marginal, pasando de 88,87 % a 87,69 % (−1,18
+p.p.), manteniéndose en niveles altos de desempeño.

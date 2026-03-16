@@ -1,4 +1,4 @@
-# Contexto para IA de PC Principal (Transferencia de Proyecto)
+﻿# Contexto para IA de PC Principal (Transferencia de Proyecto)
 
 Copia y pega el siguiente texto completo en la nueva IA de tu PC principal para que se ponga al día con el proyecto en el que estábamos trabajando.
 
@@ -8,10 +8,15 @@ INICIO DEL PROMPT PARA COPIAR:
 **¡Hola IA!** Te estoy pasando el contexto maestro de un proyecto de "Análisis de Datos de Video Analytics" escrito en Python (Pandas) en el que estaba trabajando en mi notebook. Ahora vamos a continuar desarrollando este proyecto aquí en el PC principal.
 
 ### 📝 Contexto del Proyecto
-El objetivo del proyecto ha sido limpiar y sacar **métricas exactas de precisión y cobertura** desde un reporte CSV base (`que te pasa.csv`) para volcar un resumen agrupado por el campo "Zona". Ya hemos establecido las reglas matemáticas explícitas de este reporte (cómo clasificar a cada usuario, qué es cobertura y qué es precisión) porque la métrica a veces daba más del 100% en versiones iniciales. Hemos arreglado todo eso.
+El objetivo del proyecto ha sido limpiar y sacar **métricas exactas de precisión y cobertura** desde un reporte CSV base para volcar un resumen agrupado por el campo "Zona". Ya hemos establecido las reglas matemáticas explícitas de este reporte (cómo clasificar a cada usuario, qué es cobertura y qué es precisión) porque la métrica a veces daba más del 100% en versiones iniciales. Hemos arreglado todo eso.
 
-### 🗃️ Estructura del CSV (que te pasa.csv)
-Las columnas clave que usamos del archivo de origen son:
+### 🗃️ Estructura de Directorios y Ejecución
+Para organizar mejor los reportes de distintos clientes y fechas, hemos creado la estructura base `Auditorias_Clientes/{Nombre_Empresa}/{Fecha}/`
+El script *requiere* que se ejecuten parámetros por consola indicándole en qué carpeta operar. Ejemplo de uso:
+> `python calculo_metricas_video.py -e Nombre_Cliente -f 2026-03`
+El script buscará por defecto un archivo llamado `input.csv` en esa ruta, y dejará los reportes ahí mismo.
+
+Las columnas clave que usamos del archivo de origen (`input.csv`) son:
 *   `Identity_ID`: Identificador de persona. Puede tener un UUID, venir vacío/nulo, o decir "unknown".
 *   `Zona_name`: La zona física (ej. Atencion_Club, Fila_Club). No se usa si viene vacío.
 *   `Action`: Acción del evento (ej. Enter, Exit).
@@ -26,17 +31,39 @@ Las columnas clave que usamos del archivo de origen son:
 *   **Identity unknown**: Se cuenta cuántos literales dicen "unknown" de la columna `Identity_ID`.
 *   **Cobertura de Género / Edad**: Cuántos de esos campos NO son nulos y contienen datos viables (ej. edad mayor a 0, y el string de género no debe ser "unknown").
 
-### 💻 Script Actual (import pandas as pd.py)
+### 💻 Script Actual (calculo_metricas_video.py)
 A continuación te presento el código exacto, funcional e implementado del script Python en su estado actual, el cual procesa el archivo leyendo el origen y exportando dos CSV (delimitado por coma y delimitado por tabulación). 
 
 ```python
 import pandas as pd
+import argparse
+import os
+
+# ==========================================
+# Configuración Dinámica de Rutas (Argparse)
+# ==========================================
+parser = argparse.ArgumentParser(description='Procesa los datos de Video Analytics para un cliente y fecha específicos.')
+parser.add_argument('-e', '--empresa', type=str, required=True, help='Nombre de la carpeta de la empresa (ej. Empresa_Demo)')
+parser.add_argument('-f', '--fecha', type=str, required=True, help='Nombre de la carpeta de fecha (ej. 2026-03)')
+parser.add_argument('-i', '--input', type=str, default='input.csv', help='Nombre del archivo CSV a leer (por defecto: input.csv)')
+args = parser.parse_args()
+
+# Construir rutas dinámicamente
+base_dir = "Auditorias_Clientes"
+work_dir = os.path.join(base_dir, args.empresa, args.fecha)
+input_file_path = os.path.join(work_dir, args.input)
+
+# Validar que el archivo y directorio existan
+if not os.path.exists(input_file_path):
+    print(f"❌ ERROR: No se encontró el archivo en la ruta:\n   {input_file_path}")
+    print("Por favor verifica que la carpeta de la empresa y fecha estén bien escritas y el archivo exista.")
+    exit(1)
 
 # ==========================================
 # PASO 1: Leer el archivo CSV original
 # ==========================================
-print("Leyendo datos desde Datos.csv...")
-df = pd.read_csv('que te pasa.csv')
+print(f"Leyendo datos desde:\n   {input_file_path}")
+df = pd.read_csv(input_file_path)
 
 # Filtrar solo registros que tengan un 'Zona_name' asignado
 df_zones = df[df['Zona_name'].notna() & (df['Zona_name'] != '')].copy()
@@ -119,16 +146,19 @@ reporte = pd.concat([reporte, df_totales], ignore_index=True)
 # ==========================================
 # PASO 3: Exportar el reporte procesado
 # ==========================================
-output_filename = 'reporte_cobertura.csv'
+output_filename = os.path.join(work_dir, 'reporte_cobertura.csv')
 reporte.to_csv(output_filename, index=False, sep='\t') # Tab-separated para que se vea igual que el ejemplo
 # Tambien lo guardo como CSV normal separado por comas
-reporte.to_csv('reporte_cobertura_comas.csv', index=False)
+output_comas = os.path.join(work_dir, 'reporte_cobertura_comas.csv')
+reporte.to_csv(output_comas, index=False)
 
-print(f"✅ Nuevo reporte procesado exportado exitosamente")
+print(f"✅ Nuevo reporte exportado exitosamente en la carpeta del cliente:")
+print(f"   -> {output_filename}")
+print(f"   -> {output_comas}")
 ```
 
 👉 **Mi siguiente pregunta e instrucción para continuar en este proyecto es:**
-(Escribe aquí tu petición a la nueva IA)
+Para ejecutar este script, debes usar la línea de comandos y pasar los parámetros `-e` para la empresa y `-f` para la fecha. Por ejemplo: `python calculo_metricas_video.py -e Nombre_Cliente -f 2026-03`. El script ahora lee el `input.csv` y guarda los reportes de salida (`reporte_cobertura.csv` y `reporte_cobertura_comas.csv`) directamente en la carpeta dinámica `Auditorias_Clientes/{Nombre_Empresa}/{Fecha}/` que se especifica en los parámetros.
 
 ---
 FIN DEL PROMPT.

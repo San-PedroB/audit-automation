@@ -1,13 +1,35 @@
-# Entornos Virtuales
-venv/
+# Entorno virtual
+.venv/
 env/
+venv/
+ENV/
+
+# Python
 __pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
 
-# Archivos de depuración y logs
-club_debug.csv
-club_output.csv
-club_output.txt
-*.log
+# Streamlit
+.streamlit/
 
-# Opcional: Si no quieres subir los CSV originales o muy grandes porque Github no los admite (comentado)
-# *.csv
+# Datos del proyecto (Opcional: descomentar si no quieres subir datos reales)
+# Auditorias_Clientes/
+
+# Reportes generados
+Reporte_Auditoria_*.xlsx
+
+# Otros
+.DS_Store
+.vscode/
+.idea/

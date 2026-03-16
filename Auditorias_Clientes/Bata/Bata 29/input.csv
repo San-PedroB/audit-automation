@@ -1,0 +1,179 @@
+Camara,Identity_ID,Zona_name,Gender,Age,Action,Track_ID,Time,Event_Audit,Gender_Audit,Age_Audit,Observation_A,Observation_B
+1,unknown,Exterior-L,Male,28,Enter,416e83af-9f07-4e3f-b786-54efe3a92de1,"Mar 9, 2026 11:01:12 PM",Bien,Bien,Bien,,Conteo sube
+1,unknown,Exterior-L,Female,28,Enter,286bb376-f708-4590-b266-6392187241e1,"Mar 9, 2026 11:01:13 PM",Bien,Bien,Bien,,Conteo sube
+1,unknown,Entrada Princial,Female,28,Enter,286bb376-f708-4590-b266-6392187241e1,"Mar 9, 2026 11:01:14 PM",Bien,Bien,Bien,,Conteo sube
+1,unknown,Entrada-Izquierda,Female,28,Enter,286bb376-f708-4590-b266-6392187241e1,"Mar 9, 2026 11:01:15 PM",Bien,Bien,Bien,,Conteo sube
+1,,Exterior-2,,,,de1f,11:01:38,Mal,,,Evento no registrado,Conteo sube
+1,,Exterior-L,,,,dc84,11:01:55,Mal,,,Evento no registrado,Conteo sube
+1,,Exterior-2,,,,9312,11:02:32,Mal,,,Evento no registrado,Conteo sube
+1,,Exterior-2,,,,15fd,11:02:56,Mal,,,Evento no registrado,Conteo sube
+1,,Exterior-2,,,,93c3,11:03:55,Mal,,,Evento no registrado,Conteo sube
+1,a4cb2226-e7be-4b06-965c-a6c0f1d01a2b,Entrada Princial,Female,28,Enter,13914759-2b54-462a-9565-07cf96c99ce9,"Mar 9, 2026 11:03:50 PM",Bien,Bien,Bien,,Conteo sube
+1,a4cb2226-e7be-4b06-965c-a6c0f1d01a2b,Exterior-L,Female,28,Enter,13914759-2b54-462a-9565-07cf96c99ce9,"Mar 9, 2026 11:03:50 PM",Bien,Bien,Bien,,Conteo sube
+1,a4cb2226-e7be-4b06-965c-a6c0f1d01a2b,Entrada-Izquierda,Female,28,Enter,13914759-2b54-462a-9565-07cf96c99ce9,"Mar 9, 2026 11:03:51 PM",Bien,Bien,Bien,,Conteo sube
+1,unknown,Exterior-2,Female,28,Enter,f5a30467-1638-425e-8f42-d203db5ee613,"Mar 9, 2026 11:04:13 PM",Bien,Bien,Bien,,Conteo sube
+1,unknown,Exterior-L,Female,28,Exit,f5a30467-1638-425e-8f42-d203db5ee613,"Mar 9, 2026 11:04:13 PM",Bien,Bien,Bien,,Conteo sube
+1,a4cb2226-e7be-4b06-965c-a6c0f1d01a2b,Entrada-Izquierda,Female,28,Exit,e1145c65-355b-4519-b434-1a0f1bb4b24a,"Mar 9, 2026 11:04:19 PM",Bien,Bien,Bien,,Conteo sube
+1,a4cb2226-e7be-4b06-965c-a6c0f1d01a2b,Exterior-L,Female,28,Exit,e1145c65-355b-4519-b434-1a0f1bb4b24a,"Mar 9, 2026 11:04:22 PM",Bien,Bien,Bien,,Conteo sube
+1,a4cb2226-e7be-4b06-965c-a6c0f1d01a2b,Entrada Princial,Female,28,Exit,e1145c65-355b-4519-b434-1a0f1bb4b24a,"Mar 9, 2026 11:04:23 PM",Bien,Bien,Bien,,Conteo sube
+1,,Exterior-L,,,,088b,11:04:22,Mal,,,Evento no registrado,Conteo sube
+1,,Exterior-2,,,,ebdf,11:04:26,Mal,,,Evento no registrado,Conteo sube
+1,,Exterior-2,,,,1352,11:04:26,Mal,,,Evento no registrado,Conteo sube
+1,,Exterior-L,,,,8fee,11:06:24,Mal,,,Evento no registrado,Conteo sube
+1,608e37a8-88b8-461d-80aa-e64afe26bbd4,Entrada-Izquierda,Female,28,Exit,0fd5cd4d-895b-493c-beee-a780f9eedd4b,"Mar 9, 2026 11:06:59 PM",Bien,Bien,Bien,,Conteo sube
+1,9273f9d5-4e37-4761-ac18-fc2beb6d59ba,Entrada-Izquierda,Female,28,Exit,7d548d70-e82f-4a66-b80c-c6f5a0766f58,"Mar 9, 2026 11:07:00 PM",Bien,Bien,Bien,,Conteo sube
+1,9273f9d5-4e37-4761-ac18-fc2beb6d59ba,Exterior-L,Female,28,Exit,7d548d70-e82f-4a66-b80c-c6f5a0766f58,"Mar 9, 2026 11:07:03 PM",Bien,Bien,Bien,,Conteo sube
+1,9273f9d5-4e37-4761-ac18-fc2beb6d59ba,Entrada Princial,Female,28,Exit,7d548d70-e82f-4a66-b80c-c6f5a0766f58,"Mar 9, 2026 11:07:04 PM",Bien,Bien,Bien,,Conteo sube
+1,17f5ac03-3911-4599-aa1f-0c1ea168f973,Exterior-L,Female,28,Enter,403e8358-1813-4a72-94a2-1defdb83c75d,"Mar 9, 2026 11:07:48 PM",Bien,Bien,Bien,,Conteo sube
+1,17f5ac03-3911-4599-aa1f-0c1ea168f973,Entrada Princial,Female,28,Enter,403e8358-1813-4a72-94a2-1defdb83c75d,"Mar 9, 2026 11:07:49 PM",Bien,Bien,Bien,,Conteo sube
+1,17f5ac03-3911-4599-aa1f-0c1ea168f973,Exploracion-Izq,Female,28,Enter,403e8358-1813-4a72-94a2-1defdb83c75d,"Mar 9, 2026 11:07:49 PM",,,,,
+1,17f5ac03-3911-4599-aa1f-0c1ea168f973,Entrada-Izquierda,Female,28,Enter,403e8358-1813-4a72-94a2-1defdb83c75d,"Mar 9, 2026 11:07:50 PM",Bien,Bien,Bien,,Conteo sube
+1,,Exploracion-Izq,,,,403e8358-1813-4a72-94a2-1defdb83c75d,11:07:51,Mal,,,Evento no registrado,
+1,unknown,Entrada Princial,Female,28,Enter,c1526552-eb4f-4be6-a4b1-ad8e1bfebf82,"Mar 9, 2026 11:07:50 PM",Bien,Bien,Bien,,Conteo sube
+1,unknown,Entrada-Izquierda,Female,28,Enter,c1526552-eb4f-4be6-a4b1-ad8e1bfebf82,"Mar 9, 2026 11:07:51 PM",Bien,Bien,Bien,,Conteo sube
+1,unknown,Exterior-L,Male,45,Enter,89d54c61-e884-45b0-8b42-ce96fa0be9eb,"Mar 9, 2026 11:07:52 PM",Bien,Bien,Bien,,Conteo sube
+1,unknown,Entrada Princial,Male,45,Enter,89d54c61-e884-45b0-8b42-ce96fa0be9eb,"Mar 9, 2026 11:07:53 PM",Bien,Bien,Bien,,Conteo sube
+1,unknown,Exploracion-Izq,Male,28,Enter,f4a7992e-9540-4862-8e48-361df5f70f5c,"Mar 9, 2026 11:07:59 PM",Bien,Mal,Mal,,
+1,unknown,Exploracion-Izq,Male,45,Enter,89d54c61-e884-45b0-8b42-ce96fa0be9eb,"Mar 9, 2026 11:08:03 PM",Bien,Bien,Bien,,
+1,unknown,Exterior-L,Female,28,Enter,39164db5-fd3a-4465-8ab8-80730627334c,"Mar 9, 2026 11:08:04 PM",Bien,Bien,Bien,,Conteo sube
+1,unknown,Entrada-Izquierda,Male,45,Enter,89d54c61-e884-45b0-8b42-ce96fa0be9eb,"Mar 9, 2026 11:08:04 PM",Bien,Bien,Bien,,
+1,17f5ac03-3911-4599-aa1f-0c1ea168f973,Exploracion-Izq,Female,28,Exit,403e8358-1813-4a72-94a2-1defdb83c75d,"Mar 9, 2026 11:08:12 PM",Bien,Bien,Bien,Oclusión genera cambio de ID,
+1,17f5ac03-3911-4599-aa1f-0c1ea168f973,Entrada-Izquierda,Female,45,Exit,076a2bbb-bd3f-4e71-a572-1d7c0ce616b9,"Mar 9, 2026 11:08:14 PM",Bien,Bien,Mal,,Conteo sube
+1,unknown,Exploracion-Izq,Exit,45,Exit,89d54c61-e884-45b0-8b42-ce96fa0be9eb,"Mar 9, 2026 11:08:15 PM",Bien,Bien,Bien,,
+1,unknown,Entrada-Izquierda,Male,45,Exit,89d54c61-e884-45b0-8b42-ce96fa0be9eb,"Mar 9, 2026 11:08:16 PM",Bien,Bien,Bien,,Conteo sube
+1,17f5ac03-3911-4599-aa1f-0c1ea168f973,Exterior-L,Female,45,Exit,076a2bbb-bd3f-4e71-a572-1d7c0ce616b9,"Mar 9, 2026 11:08:17 PM",Bien,Bien,Mal,,Conteo sube
+1,17f5ac03-3911-4599-aa1f-0c1ea168f973,Entrada Princial,Female,45,Exit,076a2bbb-bd3f-4e71-a572-1d7c0ce616b9,"Mar 9, 2026 11:08:18 PM",Bien,Bien,Mal,,Conteo sube
+1,unknown,Exploracion-Izq,Male,28,Exit,f4a7992e-9540-4862-8e48-361df5f70f5c,"Mar 9, 2026 11:08:18 PM",Bien,Bien,Bien,,Conteo sube
+1,unknown,Entrada-Izquierda,Male,28,Exit,f4a7992e-9540-4862-8e48-361df5f70f5c,"Mar 9, 2026 11:08:19 PM",Bien,Bien,Bien,,Conteo sube
+1,unknown,Entrada Princial,Male,45,Exit,89d54c61-e884-45b0-8b42-ce96fa0be9eb,"Mar 9, 2026 11:08:19 PM",Bien,Bien,Bien,,Conteo sube
+1,unknown,Entrada Princial,Male,28,Exit,f4a7992e-9540-4862-8e48-361df5f70f5c,"Mar 9, 2026 11:08:22 PM",Bien,Bien,Bien,,Conteo sube
+1,unknown,Exterior-2,Male,45,Exit,89d54c61-e884-45b0-8b42-ce96fa0be9eb,"Mar 9, 2026 11:08:24 PM",Bien,Bien,Bien,,Conteo sube
+1,unknown,Exterior-L,Male,28,Exit,f4a7992e-9540-4862-8e48-361df5f70f5c,"Mar 9, 2026 11:08:25 PM",Bien,Bien,Bien,,Conteo sube
+1,unknown,Exterior-2,Male,28,Exit,f4a7992e-9540-4862-8e48-361df5f70f5c,"Mar 9, 2026 11:08:26 PM",Bien,Bien,Bien,,Conteo sube
+1,,Exterior-2,,,,a21d,11:08:40,Mal,,,Evento no registrado,Conteo sube
+1,,Exterior-2,,,,2s54,11:08:40,Mal,,,Evento no registrado,Conteo sube
+1,,Exterior-2,,,,2da4,11:08:41,Mal,,,Evento no registrado,Conteo sube
+1,,Exterior-L,,,,8fa7,11:08:42,Mal,,,Evento no registrado,Conteo no cambia
+1,,Exterior-L,,,,45fe,11:08:43,Mal,,,Evento no registrado,Conteo no cambia
+1,unknown,Entrada-Izquierda,Female,28,Exit,55cc32f6-0235-4971-95cf-dae9a024b656,"Mar 9, 2026 11:09:08 PM",Bien,Bien,Bien,,
+1,unknown,Entrada Princial,Female,28,Exit,55cc32f6-0235-4971-95cf-dae9a024b656,"Mar 9, 2026 11:09:10 PM",Bien,Bien,Bien,,
+1,unknown,Exterior-L,Female,28,Exit,55cc32f6-0235-4971-95cf-dae9a024b656,"Mar 9, 2026 11:09:10 PM",Bien,Bien,Bien,,
+1,,Exterior-2,,,,bdd2,11:09:16,Mal,,,Evento no registrado,Conteo sube
+1,unknown,Exploracion-Izq,Female,28,Enter,4dbbb864-1ce4-4756-99f5-78c3dcdd8deb,"Mar 9, 2026 11:09:17 PM",Bien,Bien,Bien,,
+1,unknown,Entrada-Izquierda,Female,28,Exit,40941ebf-4f55-4208-b787-55bc1a1494f3,"Mar 9, 2026 11:09:23 PM",Bien,Bien,Bien,,
+1,unknown,Exploracion-Izq,Female,28,Exit,4dbbb864-1ce4-4756-99f5-78c3dcdd8deb,"Mar 9, 2026 11:09:24 PM",Bien,Bien,Bien,,
+1,unknown,Entrada-Izquierda,Female,28,Exit,4dbbb864-1ce4-4756-99f5-78c3dcdd8deb,"Mar 9, 2026 11:09:25 PM",Bien,Bien,Bien,,
+1,unknown,Entrada Princial,Female,28,Exit,4dbbb864-1ce4-4756-99f5-78c3dcdd8deb,"Mar 9, 2026 11:09:27 PM",Bien,Bien,Bien,,
+1,unknown,Exterior-L,Female,28,Exit,4dbbb864-1ce4-4756-99f5-78c3dcdd8deb,"Mar 9, 2026 11:09:27 PM",Bien,Bien,Bien,,
+1,unknown,Entrada Princial,Female,28,Exit,40941ebf-4f55-4208-b787-55bc1a1494f3,"Mar 9, 2026 11:09:29 PM",Bien,Bien,Bien,,
+1,unknown,Exterior-L,Female,28,Exit,40941ebf-4f55-4208-b787-55bc1a1494f3,"Mar 9, 2026 11:09:29 PM",Bien,Bien,Bien,,
+1,unknown,Exterior-2,Female,28,Enter,c001fd42-7ff6-43be-8e54-207df27dfa06,"Mar 9, 2026 11:09:57 PM",Bien,Mal,Bien,,
+1,,Exterior-2,,,,fa66,11:10:04,Mal,,,Evento no registrado,Conteo sube
+1,,Exterior-2,,,,6322,11:10:54,Mal,,,Evento no registrado,Conteo sube
+1,,Exterior-L,,,,2589,11:11:16,Mal,,,Evento no registrado,Conteo sube
+1,,Exterior-2,,,,d34e,11:11:33,Mal,,,Evento no registrado,Conteo sube
+1,unknown,Exterior-L,Female,28,Enter,1936e7f5-d658-41c7-9947-33829dbfc54a,"Mar 9, 2026 11:11:14 PM",Bien,Bien,Bien,,
+1,unknown,Exterior-2,Female,28,Exit,1936e7f5-d658-41c7-9947-33829dbfc54a,"Mar 9, 2026 11:11:14 PM",Bien,Bien,Bien,,
+1,bc427ae8-bbff-4901-a799-8e6f81c58fea,Entrada Princial,Female,45,Enter,f2c1dbd4-b0ab-48c5-8104-8dbb65ecfc02,"Mar 9, 2026 11:12:18 PM",Bien,Mal,Bien,,
+1,bc427ae8-bbff-4901-a799-8e6f81c58fea,Exterior-L,Female,45,Enter,f2c1dbd4-b0ab-48c5-8104-8dbb65ecfc02,"Mar 9, 2026 11:12:18 PM",Bien,Mal,Bien,,
+1,bc427ae8-bbff-4901-a799-8e6f81c58fea,Entrada-Izquierda,Female,45,Enter,f2c1dbd4-b0ab-48c5-8104-8dbb65ecfc02,"Mar 9, 2026 11:12:20 PM",Bien,Mal,Bien,,
+2,unknown,Decision-Der,Male,45,Enter,b850ac6b-f5fe-416a-b758-27fa4e9bd041,"Mar 9, 2026 11:00:01 PM",Bien,Mal,Mal,,
+2,unknown,Decision-Izq,Male,45,Exit,b850ac6b-f5fe-416a-b758-27fa4e9bd041,"Mar 9, 2026 11:00:01 PM",Bien,Mal,Mal,,
+2,unknown,Decision-Izq,Male,45,Enter,b850ac6b-f5fe-416a-b758-27fa4e9bd041,"Mar 9, 2026 11:00:08 PM",Bien,Mal,Mal,,
+2,unknown,Zona-Caja,Male,45,Enter,b850ac6b-f5fe-416a-b758-27fa4e9bd041,"Mar 9, 2026 11:00:08 PM",Bien,Mal,Mal,,
+2,unknown,Decision-Der,Male,45,Exit,b850ac6b-f5fe-416a-b758-27fa4e9bd041,"Mar 9, 2026 11:00:08 PM",Bien,Mal,Mal,,
+2,unknown,Decision-Izq,Male,45,Exit,b850ac6b-f5fe-416a-b758-27fa4e9bd041,"Mar 9, 2026 11:00:49 PM",Bien,Mal,Mal,,
+2,unknown,Zona-Caja,Male,45,Exit,b850ac6b-f5fe-416a-b758-27fa4e9bd041,"Mar 9, 2026 11:00:49 PM",Bien,Mal,Mal,,
+2,unknown,Decision-Izq,Female,28,Enter,7be45db2-355b-4a7b-a841-2bbc89318190,"Mar 9, 2026 11:00:53 PM",Bien,Bien,Bien,,
+2,unknown,Decision-Izq,Female,28,Enter,a55583b0-7fa8-40e8-80d2-8ca2e0f5e795,"Mar 9, 2026 11:01:02 PM",Bien,Bien,Bien,,
+2,unknown,Decision-Izq,Female,28,Exit,a55583b0-7fa8-40e8-80d2-8ca2e0f5e795,"Mar 9, 2026 11:01:09 PM",Bien,Bien,Bien,Oclusión genera cambio de ID,
+2,unknown,Decision-Der,Female,28,Enter,57b7ad26-62ff-4eff-8db2-fdfa1bec147b,"Mar 9, 2026 11:01:15 PM",Bien,Bien,Bien,,
+2,unknown,Decision-Der,Female,28,Exit,57b7ad26-62ff-4eff-8db2-fdfa1bec147b,"Mar 9, 2026 11:01:20 PM",Bien,Bien,Bien,,
+2,unknown,Decision-Izq,Female,28,Enter,57b7ad26-62ff-4eff-8db2-fdfa1bec147b,"Mar 9, 2026 11:01:24 PM",Bien,Bien,Bien,,
+2,unknown,Decision-Izq,Female,28,Exit,57b7ad26-62ff-4eff-8db2-fdfa1bec147b,"Mar 9, 2026 11:01:34 PM",Bien,Bien,Bien,Oclusión genera cambio de ID,
+2,unknown,Decision-Izq,Female,45,Enter,fb785158-ab71-44f8-aac4-d1849cc2b725,"Mar 9, 2026 11:01:35 PM",Bien,Bien,Mal,,
+2,unknown,Decision-Izq,Female,45,Exit,fb785158-ab71-44f8-aac4-d1849cc2b725,"Mar 9, 2026 11:01:45 PM",Bien,Bien,Mal,,
+2,unknown,Decision-Izq,Female,28,Exit,7be45db2-355b-4a7b-a841-2bbc89318190,"Mar 9, 2026 11:01:48 PM",Bien,Bien,Bien,,
+2,unknown,Decision-Izq,Female,28,Enter,eba25bc3-49ac-4cbd-adc0-6816cf05ea0a,"Mar 9, 2026 11:02:26 PM",Bien,Bien,Bien,,
+2,unknown,Decision-Izq,Female,45,Enter,509aee39-285e-429d-bc82-bf733ae9876d,"Mar 9, 2026 11:02:33 PM",Bien,Bien,Mal,,
+2,unknown,Decision-Izq,Female,45,Exit,509aee39-285e-429d-bc82-bf733ae9876d,"Mar 9, 2026 11:02:38 PM",Bien,Bien,Mal,Oclusión genera cambio de ID,
+2,unknown,Decision-Izq,Female,28,Exit,eba25bc3-49ac-4cbd-adc0-6816cf05ea0a,"Mar 9, 2026 11:02:39 PM",Bien,Bien,Bien,,
+2,unknown,Decision-Der,Female,28,Enter,9dc47ade-00a6-482f-92bc-fe5506f1706a,"Mar 9, 2026 11:02:58 PM",Bien,Bien,Bien,,
+2,unknown,Decision-Izq,Female,45,Enter,7cc04d7a-3478-499b-ac60-d8d089dc39f3,"Mar 9, 2026 11:02:58 PM",Bien,Bien,Mal,,
+2,unknown,Decision-Izq,Female,45,Exit,7cc04d7a-3478-499b-ac60-d8d089dc39f3,"Mar 9, 2026 11:03:04 PM",Bien,Bien,Mal,,
+2,unknown,Decision-Izq,Female,28,Enter,1c76560e-5776-4d34-bbef-59de589dce44,"Mar 9, 2026 11:03:21 PM",Bien,Bien,Bien,,
+2,9273f9d5-4e37-4761-ac18-fc2beb6d59ba,Zona-Caja,Female,45,Enter,5ee85b29-ff9e-4ddb-9b0a-6982b060dfd4,"Mar 9, 2026 11:03:26 PM",Bien,Bien,Mal,,
+2,unknown,Decision-Der,Female,28,Exit,9dc47ade-00a6-482f-92bc-fe5506f1706a,"Mar 9, 2026 11:03:30 PM",Bien,Bien,Bien,,
+2,9273f9d5-4e37-4761-ac18-fc2beb6d59ba,Zona-Caja,Female,45,Exit,5ee85b29-ff9e-4ddb-9b0a-6982b060dfd4,"Mar 9, 2026 11:03:31 PM",Bien,Bien,Bien,Oclusión genera cambio de ID,
+2,608e37a8-88b8-461d-80aa-e64afe26bbd4,Decision-Izq,Female,28,Enter,acc45a59-3b2b-4afd-ad15-cb272a05f610,"Mar 9, 2026 11:03:35 PM",Bien,Bien,Bien,,
+2,608e37a8-88b8-461d-80aa-e64afe26bbd4,Zona-Caja,Female,28,Enter,acc45a59-3b2b-4afd-ad15-cb272a05f610,"Mar 9, 2026 11:03:35 PM",Bien,Bien,Bien,,
+2,unknown,Decision-Izq,Female,28,Enter,e9781fd5-e56d-4dfe-bbba-36ef7137fbbf,"Mar 9, 2026 11:03:38 PM",Bien,Bien,Bien,,
+2,9273f9d5-4e37-4761-ac18-fc2beb6d59ba,Decision-Izq,Female,28,Enter,d087d627-1540-430b-8f42-9c55d2b394c0,"Mar 9, 2026 11:03:49 PM",Bien,Bien,Bien,,
+2,9273f9d5-4e37-4761-ac18-fc2beb6d59ba,Zona-Caja,Female,28,Enter,d087d627-1540-430b-8f42-9c55d2b394c0,"Mar 9, 2026 11:03:49 PM",Bien,Bien,Bien,,
+2,608e37a8-88b8-461d-80aa-e64afe26bbd4,Decision-Izq,Female,28,Exit,acc45a59-3b2b-4afd-ad15-cb272a05f610,"Mar 9, 2026 11:03:49 PM",Bien,Bien,Bien,,
+2,608e37a8-88b8-461d-80aa-e64afe26bbd4,Zona-Caja,Female,28,Exit,acc45a59-3b2b-4afd-ad15-cb272a05f610,"Mar 9, 2026 11:03:49 PM",Bien,Bien,Bien,Oclusión genera cambio de ID,
+2,unknown,Decision-Izq,Female,28,Exit,e9781fd5-e56d-4dfe-bbba-36ef7137fbbf,"Mar 9, 2026 11:03:52 PM",Bien,Bien,Bien,Oclusión genera cambio de ID,
+2,a4cb2226-e7be-4b06-965c-a6c0f1d01a2b,Decision-Der,Female,45,Enter,800425f4-ffdd-4a3f-a207-f374b2cc4ac1,"Mar 9, 2026 11:03:59 PM",Bien,Bien,Mal,,
+2,a4cb2226-e7be-4b06-965c-a6c0f1d01a2b,Decision-Der,Female,45,Exit,800425f4-ffdd-4a3f-a207-f374b2cc4ac1,"Mar 9, 2026 11:04:09 PM",Bien,Bien,Mal,,
+2,unknown,Decision-Der,Female,28,Enter,c1c53ef4-911d-4c24-8c97-f81244645022,"Mar 9, 2026 11:04:12 PM",Bien,Bien,Bien,,
+2,unknown,Decision-Izq,Female,28,Enter,f7641bf4-fa53-4fbe-b7b8-459c45029155,"Mar 9, 2026 11:04:18 PM",Bien,Bien,Bien,,
+2,unknown,Decision-Izq,Female,28,Exit,1c76560e-5776-4d34-bbef-59de589dce44,"Mar 9, 2026 11:04:18 PM",Bien,Bien,Bien,Oclusión genera cambio de ID,
+2,unknown,Decision-Der,Female,28,Exit,c1c53ef4-911d-4c24-8c97-f81244645022,"Mar 9, 2026 11:04:28 PM",Bien,Bien,Bien,,
+2,unknown,Decision-Der,Female,28,Enter,c1c53ef4-911d-4c24-8c97-f81244645022,"Mar 9, 2026 11:04:48 PM",Bien,Bien,Bien,,
+2,unknown,Decision-Der,Female,28,Exit,c1c53ef4-911d-4c24-8c97-f81244645022,"Mar 9, 2026 11:04:58 PM",Bien,Bien,Bien,,
+2,9273f9d5-4e37-4761-ac18-fc2beb6d59ba,Decision-Izq,Female,28,Exit,d087d627-1540-430b-8f42-9c55d2b394c0,"Mar 9, 2026 11:06:08 PM",Bien,Bien,Bien,,
+2,9273f9d5-4e37-4761-ac18-fc2beb6d59ba,Zona-Caja,Female,28,Exit,d087d627-1540-430b-8f42-9c55d2b394c0,"Mar 9, 2026 11:06:08 PM",Bien,Bien,Bien,,
+2,9273f9d5-4e37-4761-ac18-fc2beb6d59ba,Decision-Izq,Female,45,Enter,ae2339c8-9e28-401c-b83d-12c796a99324,"Mar 9, 2026 11:06:13 PM",Bien,Bien,Mal,,
+2,9273f9d5-4e37-4761-ac18-fc2beb6d59ba,Zona-Caja,Female,45,Enter,ae2339c8-9e28-401c-b83d-12c796a99324,"Mar 9, 2026 11:06:13 PM",Bien,Bien,Mal,,
+2,unknown,Decision-Izq,Female,28,Exit,f7641bf4-fa53-4fbe-b7b8-459c45029155,"Mar 9, 2026 11:06:25 PM",Bien,Bien,Bien,,
+2,unknown,Decision-Izq,Female,28,Enter,d2dfc5d3-ec37-408e-b79a-3ce060ec90cd,"Mar 9, 2026 11:06:26 PM",Bien,Bien,Bien,,
+3,608e37a8-88b8-461d-80aa-e64afe26bbd4,Interior-Der,Female,28,Enter,6fe48c04-3831-4828-b479-49e521294594,"Mar 9, 2026 11:00:00 PM",Bien,Bien,Bien,,
+3,unknown,Interior-Izq,Female,28,Exit,67e3c25f-497a-47b9-9b2f-01bac5f7ef8a,"Mar 9, 2026 11:00:04 PM",Bien,Bien,Bien,,
+3,608e37a8-88b8-461d-80aa-e64afe26bbd4,Interior-Der,Female,28,Exit,e1b02e9d-f87e-43df-b4c8-3ead895a4bc8,"Mar 9, 2026 11:00:12 PM",Bien,Bien,Bien,Oclusión genera cambio de ID,
+3,unknown,Interior-Izq,Female,28,Enter,67e3c25f-497a-47b9-9b2f-01bac5f7ef8a,"Mar 9, 2026 11:00:16 PM",Bien,Bien,Bien,,
+3,608e37a8-88b8-461d-80aa-e64afe26bbd4,Interior-Der,Female,28,Enter,fe0d29f5-71bf-4f83-996a-fd31d184aaa5,"Mar 9, 2026 11:00:30 PM",Bien,Bien,Bien,,
+3,608e37a8-88b8-461d-80aa-e64afe26bbd4,Interior-Der,Female,28,Exit,6fe48c04-3831-4828-b479-49e521294594,"Mar 9, 2026 11:00:30 PM",Bien,Bien,Bien,Oclusión genera cambio de ID,
+3,608e37a8-88b8-461d-80aa-e64afe26bbd4,Interior-Der,Female,28,Exit,fe0d29f5-71bf-4f83-996a-fd31d184aaa5,"Mar 9, 2026 11:00:44 PM",Bien,Bien,Bien,Oclusión genera cambio de ID,
+3,unknown,Interior-Izq,Female,28,Exit,67e3c25f-497a-47b9-9b2f-01bac5f7ef8a,"Mar 9, 2026 11:00:47 PM",Bien,Bien,Bien,,
+3,608e37a8-88b8-461d-80aa-e64afe26bbd4,Interior-Der,Female,28,Enter,a5349b02-653a-4635-b442-e99f6033b1e3,"Mar 9, 2026 11:00:49 PM",Bien,Bien,Bien,,
+3,unknown,Interior-Der,Female,28,Enter,38c28f99-b9a7-4668-ae41-3ceb93a5b3b9,"Mar 9, 2026 11:01:24 PM",Bien,Bien,Bien,,
+3,unknown,Interior-Der,Female,28,Exit,38c28f99-b9a7-4668-ae41-3ceb93a5b3b9,"Mar 9, 2026 11:01:29 PM",Bien,Bien,Bien,Oclusión genera cambio de ID,
+3,608e37a8-88b8-461d-80aa-e64afe26bbd4,Interior-Der,Female,28,Exit,a5349b02-653a-4635-b442-e99f6033b1e3,"Mar 9, 2026 11:01:35 PM",Bien,Bien,Bien,Oclusión genera cambio de ID,
+3,608e37a8-88b8-461d-80aa-e64afe26bbd4,Interior-Der,Female,28,Enter,5c3da41c-e8b7-4fc3-ba8d-5bb5d4508fbe,"Mar 9, 2026 11:01:44 PM",Bien,Bien,Bien,,
+3,unknown,Interior-Der,Female,28,Enter,67e3c25f-497a-47b9-9b2f-01bac5f7ef8a,"Mar 9, 2026 11:01:54 PM",Bien,Bien,Bien,,
+3,unknown,Interior-Izq,Female,28,Enter,67e3c25f-497a-47b9-9b2f-01bac5f7ef8a,"Mar 9, 2026 11:02:02 PM",Bien,Bien,Bien,,
+3,unknown,Interior-Der,Female,28,Exit,67e3c25f-497a-47b9-9b2f-01bac5f7ef8a,"Mar 9, 2026 11:02:02 PM",Bien,Bien,Bien,,
+3,unknown,Interior-Der,Female,28,Enter,7ef6a1d6-262f-426e-aeb0-e4b9613a8135,"Mar 9, 2026 11:02:04 PM",Bien,Bien,Bien,,
+3,unknown,Interior-Izq,Female,28,Exit,67e3c25f-497a-47b9-9b2f-01bac5f7ef8a,"Mar 9, 2026 11:02:08 PM",Bien,Bien,Bien,,
+3,608e37a8-88b8-461d-80aa-e64afe26bbd4,Interior-Der,Female,28,Enter,0c9fd045-82d9-4ef2-ab48-7074bf47cc20,"Mar 9, 2026 11:02:09 PM",Bien,Bien,Bien,,
+3,608e37a8-88b8-461d-80aa-e64afe26bbd4,Interior-Der,Female,28,Exit,5c3da41c-e8b7-4fc3-ba8d-5bb5d4508fbe,"Mar 9, 2026 11:02:09 PM",Bien,Bien,Bien,Oclusión genera cambio de ID,
+3,unknown,Interior-Der,Female,28,Enter,3686a4d3-7ef2-42ea-bd9a-1b1103884f43,"Mar 9, 2026 11:02:15 PM",Bien,Bien,Bien,,
+3,unknown,Interior-Izq,Female,28,Enter,7ef6a1d6-262f-426e-aeb0-e4b9613a8135,"Mar 9, 2026 11:02:27 PM",Bien,Bien,Bien,,
+3,unknown,Interior-Der,Female,28,Exit,7ef6a1d6-262f-426e-aeb0-e4b9613a8135,"Mar 9, 2026 11:02:27 PM",Bien,Bien,Bien,,
+3,unknown,Interior-Izq,Female,28,Exit,7ef6a1d6-262f-426e-aeb0-e4b9613a8135,"Mar 9, 2026 11:02:32 PM",Bien,Bien,Bien,,
+3,unknown,Interior-Der,Female,28,Exit,3686a4d3-7ef2-42ea-bd9a-1b1103884f43,"Mar 9, 2026 11:02:37 PM",Bien,Bien,Bien,Oclusión genera cambio de ID,
+3,unknown,Interior-Der,Female,28,Enter,67e3c25f-497a-47b9-9b2f-01bac5f7ef8a,"Mar 9, 2026 11:02:53 PM",Bien,Bien,Bien,,
+3,9273f9d5-4e37-4761-ac18-fc2beb6d59ba,Interior-Der,Female,28,Enter,8a92f64f-23c6-4b24-900a-3e04527decc4,"Mar 9, 2026 11:03:03 PM",Bien,Bien,Bien,,
+3,9273f9d5-4e37-4761-ac18-fc2beb6d59ba,Interior-Der,Female,28,Exit,8a92f64f-23c6-4b24-900a-3e04527decc4,"Mar 9, 2026 11:03:16 PM",Bien,Bien,Bien,Oclusión genera cambio de ID,
+3,unknown,Interior-Der,Female,28,Exit,67e3c25f-497a-47b9-9b2f-01bac5f7ef8a,"Mar 9, 2026 11:03:19 PM",Bien,Bien,Bien,,
+3,608e37a8-88b8-461d-80aa-e64afe26bbd4,Interior-Der,Female,28,Exit,0c9fd045-82d9-4ef2-ab48-7074bf47cc20,"Mar 9, 2026 11:03:30 PM",Bien,Bien,Bien,,
+3,unknown,Interior-Der,Female,28,Enter,c00705c2-c8c8-4dbe-b403-ba95d8c64120,"Mar 9, 2026 11:03:31 PM",Bien,Bien,Bien,,
+3,unknown,Interior-Der,Female,28,Exit,c00705c2-c8c8-4dbe-b403-ba95d8c64120,"Mar 9, 2026 11:04:11 PM",Bien,Bien,Bien,,
+3,9273f9d5-4e37-4761-ac18-fc2beb6d59ba,Interior-Der,Female,45,Enter,76544f02-2f17-4a8a-9c1e-fdca15627b76,"Mar 9, 2026 11:06:48 PM",Bien,Bien,Bien,,
+3,9273f9d5-4e37-4761-ac18-fc2beb6d59ba,Interior-Der,Female,45,Exit,76544f02-2f17-4a8a-9c1e-fdca15627b76,"Mar 9, 2026 11:06:54 PM",Bien,Bien,Bien,,
+3,unknown,Interior-Izq,Female,28,Enter,489ff935-2adf-4e95-9828-dff01bbdf09b,"Mar 9, 2026 11:07:53 PM",Bien,Bien,Bien,,
+3,unknown,Interior-Izq,Female,28,Exit,489ff935-2adf-4e95-9828-dff01bbdf09b,"Mar 9, 2026 11:07:58 PM",Bien,Bien,Bien,,
+3,unknown,Interior-Izq,Female,45,Enter,e8b40668-6e1c-47b6-9347-3b5dd41553b3,"Mar 9, 2026 11:08:04 PM",Bien,Bien,Bien,,
+3,unknown,Interior-Izq,Female,45,Exit,e8b40668-6e1c-47b6-9347-3b5dd41553b3,"Mar 9, 2026 11:08:11 PM",Bien,Bien,Bien,,
+3,259bc5e3-f2f7-4818-bed4-193baafb31b7,Interior-Der,Male,18,Enter,395fa661-9f09-488e-8028-23183a2b96b3,"Mar 9, 2026 11:32:15 PM",Bien,Bien,Bien,,
+3,259bc5e3-f2f7-4818-bed4-193baafb31b7,Interior-Der,Male,18,Exit,395fa661-9f09-488e-8028-23183a2b96b3,"Mar 9, 2026 11:32:52 PM",Bien,Bien,Bien,Oclusión genera cambio de ID,
+3,unknown,Interior-Der,Female,28,Enter,1cdfbd03-c9d0-4864-95aa-d0eb2c86ec38,"Mar 9, 2026 11:35:50 PM",Bien,Bien,Mal,,
+3,fdfab2de-8a2e-4795-bdaa-36d198663cf1,Interior-Der,Female,28,Enter,335398b7-706f-4a54-89da-556e247d5c15,"Mar 9, 2026 11:36:02 PM",Bien,Bien,Bien,,
+3,unknown,Interior-Der,Female,28,Exit,1cdfbd03-c9d0-4864-95aa-d0eb2c86ec38,"Mar 9, 2026 11:36:02 PM",Bien,Bien,Mal,Oclusión genera cambio de ID,
+3,fdfab2de-8a2e-4795-bdaa-36d198663cf1,Interior-Der,Female,28,Exit,335398b7-706f-4a54-89da-556e247d5c15,"Mar 9, 2026 11:36:12 PM",Bien,Bien,Bien,Oclusión genera cambio de ID,
+3,fdfab2de-8a2e-4795-bdaa-36d198663cf1,Interior-Der,Female,28,Enter,9117b713-2133-4604-a5a9-f75032bb0afd,"Mar 9, 2026 11:36:15 PM",Bien,Bien,Bien,,
+3,fdfab2de-8a2e-4795-bdaa-36d198663cf1,Interior-Der,Female,28,Exit,9117b713-2133-4604-a5a9-f75032bb0afd,"Mar 9, 2026 11:36:52 PM",Bien,Bien,Bien,Oclusión genera cambio de ID,
+3,fdfab2de-8a2e-4795-bdaa-36d198663cf1,Interior-Izq,Female,28,Enter,0add292c-1891-47c1-89a3-f0a41addeae2,"Mar 9, 2026 11:37:15 PM",Bien,Bien,Bien,,
+3,unknown,Interior-Izq,unknown,0,Enter,affc5c87-f564-4524-9905-54d8b335d550,"Mar 9, 2026 11:37:19 PM",Bien,Mal,Mal,,
+3,fdfab2de-8a2e-4795-bdaa-36d198663cf1,Interior-Izq,Female,28,Exit,0add292c-1891-47c1-89a3-f0a41addeae2,"Mar 9, 2026 11:37:22 PM",Bien,Bien,Bien,Oclusión genera cambio de ID,
+3,unknown,Interior-Izq,unknown,0,Exit,affc5c87-f564-4524-9905-54d8b335d550,"Mar 9, 2026 11:37:26 PM",Bien,Mal,Mal,Oclusión genera cambio de ID,
