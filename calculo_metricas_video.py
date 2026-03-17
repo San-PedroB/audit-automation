@@ -58,7 +58,6 @@ def process_audit_data(empresa, fecha, sucursal=None, input_filename='input.csv'
         # Nueva métrica: Registrados pero Incorrectos
         eventos_correctos = precicion_eventos
         eventos_registrados_mal = eventos_registrados - eventos_correctos
-
         def calc_pct(part, total):
             return (part / total) if total > 0 else 0.0
             
@@ -293,13 +292,6 @@ def process_audit_data(empresa, fecha, sucursal=None, input_filename='input.csv'
         thin_border = Border(left=Side(style='thin'), right=Side(style='thin'), 
                             top=Side(style='thin'), bottom=Side(style='thin'))
         grey_fill = PatternFill(start_color='F2F2F2', end_color='F2F2F2', fill_type='solid')
-
-        # 0. Limpiar datos previos (desde fila 3 hasta 500 para asegurar)
-        for row_to_clear in range(3, 500):
-            for col_to_clear in range(1, 25):
-                ws.cell(row=row_to_clear, column=col_to_clear).value = None
-                ws.cell(row=row_to_clear, column=col_to_clear).fill = PatternFill(fill_type=None)
-                ws.cell(row=row_to_clear, column=col_to_clear).border = Border()
 
         # 1. Cabeceras (Fila 2): Letras Blancas y Negrita
         header_font = Font(name='Arial', size=10, bold=True, color='FFFFFF')

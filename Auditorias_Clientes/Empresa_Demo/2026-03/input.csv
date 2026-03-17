@@ -1,0 +1,171 @@
+Camara,Identity_ID,Zona_name,Gender,Age,Action,Track_ID,Time,Event_Audit,Gender_Audit,Age_Audit,Observation_A,Observation_B
+2,unknown,Atencion_Club,Male,28,Enter,51e8ac64-5b7e-450f-8a7f-f70d71f74716,2026-03-11 00:03:14,Bien,Bien,Bien,,
+2,unknown,Fila_Club,Male,28,Enter,51e8ac64-5b7e-450f-8a7f-f70d71f74716,2026-03-11 00:03:21,Bien,Bien,Bien,,
+2,unknown,Atencion_Club,Male,28,Exit,51e8ac64-5b7e-450f-8a7f-f70d71f74716,2026-03-11 00:03:21,Bien,Bien,Bien,,
+2,unknown,Fila_Club,Male,28,Exit,51e8ac64-5b7e-450f-8a7f-f70d71f74716,2026-03-11 00:03:46,Bien,Bien,Bien,,
+2,unknown,Fila_Club,Male,28,Enter,d7da18c5-f5cf-4a58-9633-71972980815c,2026-03-11 00:05:40,Bien,Bien,Bien,,
+2,unknown,Fila_Club,Male,28,Exit,d7da18c5-f5cf-4a58-9633-71972980815c,2026-03-11 00:07:06,Bien,Bien,Bien,,
+2,unknown,Fila_Club,Male,28,Enter,ce9b7ad1-8167-48f8-a9c9-65d274aa4e75,2026-03-11 00:09:22,Bien,Bien,Bien,,
+2,unknown,Fila_Club,Male,28,Exit,ce9b7ad1-8167-48f8-a9c9-65d274aa4e75,2026-03-11 00:09:43,Bien,Bien,Bien,,
+2,,Atencion_Club,,,,8d33,0:11:04,Mal,,,Evento no registrado,TRACK_ID desaparece
+2,,Atencion_Club,,,,15ad,0:11:04,Mal,,,Evento no registrado,TRACK_ID desaparece
+2,,Atencion_Club,,,,d683,0:11:04,Mal,,,Evento no registrado,TRACK_ID desaparece
+2,unknown,Fila_Club,Female,28,Enter,fbfd2f87-08bc-4b62-a5b3-16a1dd66b484,2026-03-11 00:11:49,Bien,Bien,Bien,,
+2,unknown,Fila_Club,Female,28,Exit,fbfd2f87-08bc-4b62-a5b3-16a1dd66b484,2026-03-11 00:12:00,Bien,Bien,Bien,,
+2,unknown,Fila_Club,Male,28,Enter,fda8c251-820d-4f1a-b51a-9602f4ba015a,2026-03-11 00:14:25,Bien,Bien,Bien,,
+2,unknown,Fila_Club,Male,28,Exit,fda8c251-820d-4f1a-b51a-9602f4ba015a,2026-03-11 00:14:44,Bien,Bien,Bien,,
+2,ad93ba12-d513-4f5f-9657-89f57c812d8a,Atencion_Club,Male,28,Enter,97bc4955-0cdc-469a-baf8-318c2bacb0dc,2026-03-11 00:18:35,Bien,Bien,Bien,,
+2,ad93ba12-d513-4f5f-9657-89f57c812d8a,Atencion_Club,Male,28,Exit,97bc4955-0cdc-469a-baf8-318c2bacb0dc,2026-03-11 00:18:54,Bien,Bien,Bien,,
+2,unknown,Fila_Club,Male,28,Enter,ba79d331-f182-4a42-8a24-cf1c1bee4501,2026-03-11 00:24:50,Bien,Bien,Bien,,
+2,unknown,Fila_Club,Male,28,Exit,ba79d331-f182-4a42-8a24-cf1c1bee4501,2026-03-11 00:24:56,Bien,Bien,Bien,,
+2,,Atencion_Club,,,,5f3e,0:26:53,Mal,,,Evento no registrado,TRACK_ID desaparece
+2,unknown,Fila_Club,Male,45,Enter,8d2f15ce-52cf-4be8-b414-9b958b3ee4a2,2026-03-11 00:27:02,Bien,Bien,Bien,,
+2,unknown,Fila_Club,Male,45,Exit,8d2f15ce-52cf-4be8-b414-9b958b3ee4a2,2026-03-11 00:27:15,Bien,Bien,Bien,,TRACK_ID desaparece
+2,unknown,Atencion_Club,Male,45,Enter,b14439eb-0d94-43e7-990e-9fd9e30691e6,2026-03-11 00:27:33,Bien,Bien,Bien,,
+2,,Atencion_Club,,,,f24d,0:27:56,Mal,,,Evento no registrado,TRACK_ID desaparece
+2,4c7a08ef-67ad-4a08-be9f-6354107bcaec,Fila_Club,Male,28,Enter,105a3aa8-67bd-423e-a3e8-a5bb360822f0,2026-03-11 00:28:05,Bien,Bien,Bien,,
+2,unknown,Atencion_Club,Male,45,Exit,b14439eb-0d94-43e7-990e-9fd9e30691e6,2026-03-11 00:28:07,Mal,Bien,Bien,,TRACK_ID desaparece
+2,4c7a08ef-67ad-4a08-be9f-6354107bcaec,Fila_Club,Male,28,Exit,105a3aa8-67bd-423e-a3e8-a5bb360822f0,2026-03-11 00:28:16,Bien,Bien,Bien,,
+2,,Atencion_Club,,,,3a93,0:28:33,Mal,,,Evento no registrado,TRACK_ID desaparece
+2,,Atencion_Club,,,,bf29,0:28:35,Mal,,,Evento no registrado,TRACK_ID desaparece
+2,unknown,Atencion_Club,Male,18,Enter,65564e97-8950-4905-9eb0-732e0247686b,2026-03-11 00:28:31,Bien,Bien,Bien,,
+2,unknown,Fila_Club,Male,28,Enter,2ccf943b-36d9-434d-be1c-e20539c3b2b2,2026-03-11 00:29:35,Bien,Bien,Bien,,
+2,unknown,Fila_Club,Male,28,Exit,2ccf943b-36d9-434d-be1c-e20539c3b2b2,2026-03-11 00:29:41,Bien,Bien,Bien,,
+2,unknown,Atencion_Club,Male,18,Exit,65564e97-8950-4905-9eb0-732e0247686b,2026-03-11 00:29:44,Bien,Bien,Bien,,
+2,a04bbf00-6b82-4f6a-9491-5c46d8ff58f1,Atencion_Club,Female,45,Enter,3987b227-abea-429b-9c5f-68da4996557a,2026-03-11 00:29:54,Bien,Bien,Bien,,
+2,a04bbf00-6b82-4f6a-9491-5c46d8ff58f1,Atencion_Club,Female,45,Exit,3987b227-abea-429b-9c5f-68da4996557a,2026-03-11 00:30:15,Bien,Bien,Bien,,
+2,,Atencion_Club,,,,0d68,0:32:29,Mal,,,Evento no registrado,TRACK_ID desaparece
+2,unknown,Atencion_Club,Female,18,Enter,38a87d73-f47c-48c9-8c68-57ad2a8e9e72,2026-03-11 00:35:54,Bien,Bien,Bien,,
+2,unknown,Atencion_Club,Female,18,Exit,38a87d73-f47c-48c9-8c68-57ad2a8e9e72,2026-03-11 00:36:07,Bien,Bien,Bien,,
+3,,,,,,N/A,0:01:09,Mal,,,Evento no registrado,Sin TRACK_ID
+3,unknown,Norte_Fila,Female,28,Enter,33a28882-1f77-4c85-b3f4-a72bca17e2ce,2026-03-11 00:03:34,Bien,Bien,Mal,,
+3,unknown,Norte_Fila,Female,28,Exit,33a28882-1f77-4c85-b3f4-a72bca17e2ce,2026-03-11 00:04:16,Bien,Bien,Mal,,TRACK_ID desaparece
+3,,,,,,9512,0:28:01,Mal,,,Evento no registrado,TRACK_ID desaparece
+3,unknown,Norte_Fila,Female,28,Enter,c8771393-dcf3-4c86-90ee-38a23425fb7f,2026-03-11 00:28:41,Bien,,,,
+3,unknown,Norte_Fila,Female,28,Exit,c8771393-dcf3-4c86-90ee-38a23425fb7f,2026-03-11 00:28:56,Bien,,,,TRACK_ID desaparece
+4,,Fila_Cajas,,,Exit,f22c,0:00:01,Mal,,,Evento no registrado,
+4,,Atencion_Cajas,,,Exit,a647,0:00:04,Mal,,,Evento no registrado,
+4,,Atencion_Cajas,,,Exit,N/A,0:00:21,Mal,,,Evento no registrado,Sin TRACK_ID
+4,,Atencion_Cajas,,,Enter,N/A,0:00:39,Mal,,,Evento no registrado,
+4,,Atencion_Cajas,,,Enter,1309,0:00:52,Mal,,,Evento no registrado,TRACK_ID desaparece
+4,,Atencion_Cajas,,,Enter,N/A,0:01:30,Mal,,,Evento no registrado,Sin TRACK_ID
+4,,Atencion_Cajas,,,Enter,N/A,0:02:42,Mal,,,Evento no registrado,Sin TRACK_ID
+4,,Atencion_Cajas,,,Enter,N/A,0:02:45,Mal,,,Evento no registrado,Sin TRACK_ID
+4,unknown,Atencion_Cajas,Female,28,Enter,3e8e3242-8ab4-42a3-9f07-db35344fecb4,2026-03-11 00:02:53,Bien,Bien,Mal,,
+4,,Atencion_Cajas,,,Exit,"""7e21""",0:03:22,Mal,,,Evento no registrado,TRACK_ID desaparece
+4,unknown,Atencion_Cajas,Female,28,Exit,3e8e3242-8ab4-42a3-9f07-db35344fecb4,2026-03-11 00:03:29,Bien,Bien,Mal,,
+4,,Atencion_Cajas,,,Enter,4547,0:03:41,Mal,,,Evento no registrado,TRACK_ID desaparece
+4,,Atencion_Cajas,,,Enter,5290,0:03:43,Mal,,,Evento no registrado,TRACK_ID desaparece
+4,unknown,Atencion_Cajas,Female,60,Enter,8dae18aa-5313-4e46-affd-6261d581374b,2026-03-11 00:03:49,Bien,Bien,Mal,,
+4,,Atencion_Cajas,,,Enter,N/A,0:33:55,Mal,,,Evento no registrado,TRACK_ID desaparece
+4,unknown,Atencion_Cajas,Female,60,Exit,8dae18aa-5313-4e46-affd-6261d581374b,2026-03-11 00:04:35,Bien,Bien,Mal,,
+4,,Atencion_Cajas,,,,1bca,,Mal,,,Evento no registrado,TRACK_ID desaparece
+4,,Atencion_Cajas,,,,1629,0:04:40,Mal,,,Evento no registrado,
+5,,Atencion_Barra,,,,8128,0:00:41,Mal,,,Evento no registrado,TRACK_ID desaparece
+5,,Atencion_Barra,,,,9641,0:01:31,Mal,,,Evento no registrado,
+5,,Atencion_Barra,,,,5f16,0:02:14,Mal,,,Evento no registrado,
+5,,Atencion_Barra,,,,42b5,0:03:13,Mal,,,Evento no registrado,TRACK_ID desaparece
+5,,Atencion_Barra,,,,d52b,0:03:20,Mal,,,Evento no registrado,TRACK_ID desaparece
+5,,Atencion_Barra,,,,22ec,0:03:50,Mal,,,Evento no registrado,TRACK_ID desaparece
+5,,Atencion_Barra,,,,df68,0:05:22,Mal,,,Evento no registrado,TRACK_ID desaparece
+5,unknown,Atencion_Barra,Female,28,Enter,2a624d09-abb4-443e-b027-d42072360592,2026-03-11 00:06:08,Bien,Bien,Bien,,
+5,unknown,Atencion_Barra,Female,28,Exit,2a624d09-abb4-443e-b027-d42072360592,2026-03-11 00:06:21,Bien,Bien,Bien,,
+5,,Atencion_Barra,,,,3787,0:06:29,Mal,,,Evento no registrado,
+5,,Atencion_Barra,,,,3787,0:06:48,Mal,,,Evento no registrado,TRACK_ID desaparece
+5,,Atencion_Barra,,,,9796,0:07:08,Mal,,,Evento no registrado,
+5,,Atencion_Barra,,,,9796,0:07:17,Mal,,,Evento no registrado,TRACK_ID desaparece
+5,,Atencion_Barra,,,,44a4,0:08:47,Mal,,,Evento no registrado,TRACK_ID desaparece
+5,,Atencion_Barra,,,,67b7,0:09:01,Mal,,,Evento no registrado,TRACK_ID desaparece
+5,unknown,Atencion_Barra,Male,60,Enter,91058ebf-1baf-497d-939e-1d49950a9439,2026-03-11 00:10:34,Bien,Bien,Mal,,
+5,unknown,Atencion_Barra,Male,60,Exit,91058ebf-1baf-497d-939e-1d49950a9439,2026-03-11 00:10:47,Bien,Bien,Mal,,
+5,unknown,Atencion_Barra,Male,60,Enter,91058ebf-1baf-497d-939e-1d49950a9439,2026-03-11 00:10:55,Bien,Bien,Mal,,
+5,unknown,Atencion_Barra,Male,60,Exit,91058ebf-1baf-497d-939e-1d49950a9439,2026-03-11 00:11:59,Bien,Bien,Mal,,
+5,unknown,Atencion_Barra,unknown,0,Enter,396e9350-c7a6-4472-ac21-922e704b0cff,2026-03-11 00:12:33,Bien,Mal,Mal,,
+5,unknown,Sillas Barra,unknown,0,Enter,ebf6bffd-7ed6-47b5-80af-d030cd96d4bc,2026-03-11 00:12:41,Bien,Mal,Mal,,
+5,unknown,Atencion_Barra,unknown,0,Exit,396e9350-c7a6-4472-ac21-922e704b0cff,2026-03-11 00:13:14,Bien,Mal,Mal,,
+5,unknown,Sillas Barra,unknown,0,Exit,ebf6bffd-7ed6-47b5-80af-d030cd96d4bc,2026-03-11 00:13:14,Bien,Mal,Mal,,
+5,,Atencion_Barra,,,,36c0,0:13:30,Mal,,,Evento no registrado,TRACK_ID desaparece
+5,,Atencion_Barra,,,,3d59,0:13:48,Mal,,,Evento no registrado,TRACK_ID desaparece
+5,unknown,Atencion_Barra,Female,28,Enter,e328ee8a-a930-4f4e-816e-45e801f9af94,2026-03-11 00:15:52,Bien,Mal,Bien,,
+5,unknown,Atencion_Barra,Female,28,Exit,e328ee8a-a930-4f4e-816e-45e801f9af94,2026-03-11 00:16:03,Bien,Mal,Bien,,
+5,,Atencion_Barra,,,,ee51,0:19:51,Mal,,,Evento no registrado,TRACK_ID desaparece
+5,,Atencion_Barra,,,,"""0422""",0:20:06,Mal,,,Evento no registrado,TRACK_ID desaparece
+5,unknown,Atencion_Barra,Female,28,Enter,e67270c1-7152-41c0-a270-ed2b95e0e1b4,2026-03-11 00:22:57,Bien,Mal,Bien,,
+5,unknown,Atencion_Barra,Female,28,Exit,e67270c1-7152-41c0-a270-ed2b95e0e1b4,2026-03-11 00:23:09,Bien,Mal,Bien,,
+5,,Atencion_Barra,,,,97b6,0:23:10,Mal,,,Evento no registrado,TRACK_ID desaparece
+5,unknown,Atencion_Barra,Male,60,Enter,63490629-2ec8-427f-984e-03bf26bf4215,2026-03-11 00:24:10,Bien,Bien,Mal,,
+5,unknown,Atencion_Barra,Male,60,Exit,63490629-2ec8-427f-984e-03bf26bf4215,2026-03-11 00:24:16,Bien,Bien,Mal,,
+5,unknown,Atencion_Barra,Male,60,Enter,9acac80e-cd99-4d57-a265-b40ab456082b,2026-03-11 00:24:59,Bien,Bien,Mal,,
+5,unknown,Atencion_Barra,Male,60,Exit,9acac80e-cd99-4d57-a265-b40ab456082b,2026-03-11 00:25:24,Bien,Bien,Mal,,
+5,unknown,Atencion_Barra,Female,60,Enter,c2812d94-c552-495e-b7d7-f8aba472af01,2026-03-11 00:25:26,Bien,Mal,Mal,,
+5,unknown,Atencion_Barra,Female,18,Enter,fc4a15ce-c5eb-463e-be81-48f8d71dd259,2026-03-11 00:25:39,Bien,Mal,Mal,,
+5,unknown,Atencion_Barra,Female,60,Exit,c2812d94-c552-495e-b7d7-f8aba472af01,2026-03-11 00:25:41,Bien,Mal,Mal,,
+5,unknown,Atencion_Barra,Female,18,Exit,fc4a15ce-c5eb-463e-be81-48f8d71dd259,2026-03-11 00:25:46,Bien,Mal,Mal,,
+5,,Atencion_Barra,,,,42fa,0:25:52,Mal,,,Evento no registrado,
+5,unknown,Atencion_Barra,Female,60,Enter,73c9183f-e080-45e1-b087-3dd9c44e7024,2026-03-11 00:26:09,Bien,Mal,Mal,,
+5,unknown,Atencion_Barra,Female,60,Exit,73c9183f-e080-45e1-b087-3dd9c44e7024,2026-03-11 00:26:23,Bien,Mal,Mal,,TRACK_ID desaparece
+5,,Atencion_Barra,,,,a0c0,0:26:45,Mal,,,Evento no registrado,TRACK_ID desaparece
+5,,Atencion_Barra,,,,f698,0:28:11,Mal,,,Evento no registrado,TRACK_ID desaparece
+5,,Atencion_Barra,,,,N/A,0:28:35,Mal,,,Evento no registrado,
+5,,Atencion_Barra,,,,5878,0:29:00,Mal,,,Evento no registrado,TRACK_ID desaparece
+5,,Atencion_Barra,,,,6974,0:29:06,Mal,,,Evento no registrado,TRACK_ID desaparece
+5,,Atencion_Barra,,,,"""0633""",0:29:40,Mal,,,Evento no registrado,TRACK_ID desaparece
+6,,Sur_1,,,,46a4,0:00:09,Mal,,,Evento no registrado,TRACK_ID desaparece
+6,,Sur_1,,,,4233,0:06:00,Mal,,,Evento no registrado,TRACK_ID desaparece
+6,,Sur_1,,,,81d9,0:03:07,Mal,,,Evento no registrado,TRACK_ID desaparece
+6,,Sur_1,,,,fe46,0:03:22,Mal,,,Evento no registrado,TRACK_ID desaparece
+6,,Sur_1,,,,8dc9,0:04:28,Mal,,,Evento no registrado,TRACK_ID desaparece
+6,74a9114a-b460-45d6-89ad-63ab1ed4becd,Sur_Fila,Female,60,Enter,9249c1f1-13b5-4294-97ea-0f75451034d3,2026-03-11 00:07:47,Bien,Mal,Mal,,
+6,,Sur_1,,,,9249c1f1-13b5-4294-97ea-0f75451034d3,2026-03-11 00:07:53,Mal,,,Evento no registrado,
+6,74a9114a-b460-45d6-89ad-63ab1ed4becd,Sur_Fila,Female,60,Exit,9249c1f1-13b5-4294-97ea-0f75451034d3,2026-03-11 00:07:53,Bien,Mal,Mal,,TRACK_ID desaparece
+6,,Sur_1,,,,9249c1f1-13b5-4294-97ea-0f75451034d3,2026-03-11 00:07:53,Mal,,,Evento no registrado,TRACK_ID desaparece
+6,74a9114a-b460-45d6-89ad-63ab1ed4becd,Sur_Fila,Male,28,Enter,3ea066b3-039b-4059-84a3-c65d20ee8c60,2026-03-11 00:08:32,Bien,Bien,Bien,,
+6,,Sur_1,,,,3ea066b3-039b-4059-84a3-c65d20ee8c60,2026-03-11 00:08:32,,,,Evento no registrado,
+6,74a9114a-b460-45d6-89ad-63ab1ed4becd,Sur_Fila,Male,28,Exit,3ea066b3-039b-4059-84a3-c65d20ee8c60,2026-03-11 00:09:02,Bien,Bien,Bien,,TRACK_ID desaparece
+6,,Sur_1,,,,3ea066b3-039b-4059-84a3-c65d20ee8c60,2026-03-11 00:09:02,Mal,,,Evento no registrado,TRACK_ID desaparece
+6,,Sur_1,,,,4561,00_09_06,Mal,,,Evento no registrado,TRACK_ID desaparece
+7,,Fumadores_Fila,,,,15f0,0:01:05,Mal,,,Evento no registrado,Fin Interaccion
+7,unknown,Fumadores_Fila,unknown,0,Enter,a42f28b1-fd60-4906-a610-26200a81a024,2026-03-11 00:01:11,Bien,Mal,Mal,,
+7,unknown,Fumadores_Fila,unknown,0,Exit,a42f28b1-fd60-4906-a610-26200a81a024,2026-03-11 00:01:38,Bien,Mal,Mal,Oclusión genera cambio de ID,
+7,,Fumadores_Fila,,,,ff71,0:01:41,Mal,,,Evento no registrado,Inicio Interaccion
+7,,Fumadores_Fila,,,,"""0302""",0:01:53,Mal,,,Evento no registrado,Fin Interaccion
+7,,Fumadores_Fila,,,,1603,0:01:53,Mal,,,Evento no registrado,Inicio Interaccion
+7,,Fumadores_Fila,,,,a62r,0:03:03,Mal,,,Evento no registrado,Inicio Interaccion
+7,,Fumadores_Fila,,,,15ec,0:03:38,Mal,,,Evento no registrado,Inicio Interaccion
+7,,Fumadores_Fila,,,,N/A,0:03:58,Mal,,,Evento no registrado,Inicio Interaccion
+7,,Fumadores_Fila,,,Exit,3d97,0:04:40,Mal,,,Evento no registrado,Fin Interaccion
+7,,Fumadores_Fila,,,Enter,872c,0:05:28,Mal,,,Evento no registrado,Permancia en zona
+7,,Fumadores_Fila,,,,7053,0:05:42,Mal,,,Evento no registrado,Inicio Interaccion
+7,,Fumadores_Fila,,,,150b,0:06:53,Mal,,,Evento no registrado,Inicio Interaccion
+7,,Fumadores_Fila,,,,2bae,0:08:01,Mal,,,Evento no registrado,Inicio Interaccion
+7,,Fumadores_Fila,,,,adcd,0:10:54,Mal,,,Evento no registrado,Fin Interaccion
+7,unknown,Fumadores_Fila,unknown,0,Enter,08d21e0f-7b7c-4600-91e0-53bbfdab1586,2026-03-11 00:11:02,Bien,Mal,Mal,,
+7,unknown,Fumadores_Fila,unknown,0,Exit,08d21e0f-7b7c-4600-91e0-53bbfdab1586,2026-03-11 00:11:35,Bien,Mal,Mal,Oclusión genera cambio de ID,
+7,unknown,Fumadores_Fila,unknown,0,Enter,01cd7c17-2af2-4d9b-9d52-e25f04d86f44,2026-03-11 00:13:30,Bien,Mal,Mal,,
+7,unknown,Fumadores_Fila,unknown,0,Enter,c430084a-d4ad-4e3b-9103-1d0eb53ae588,2026-03-11 00:13:30,Bien,Mal,Mal,,
+7,unknown,Fumadores_Fila,unknown,0,Exit,01cd7c17-2af2-4d9b-9d52-e25f04d86f44,2026-03-11 00:13:39,Bien,Mal,Mal,Oclusión genera cambio de ID,
+7,unknown,Fumadores_Fila,unknown,0,Exit,c430084a-d4ad-4e3b-9103-1d0eb53ae588,2026-03-11 00:13:44,Bien,Mal,Mal,,
+7,unknown,Fumadores_Fila,unknown,0,Enter,2071b09d-9037-4922-ac29-44bb523c5779,2026-03-11 00:14:12,Bien,Mal,Mal,,
+7,unknown,Fumadores_Fila,unknown,0,Exit,2071b09d-9037-4922-ac29-44bb523c5779,2026-03-11 00:14:20,Bien,Mal,Mal,,
+7,,Fumadores_Fila,,,,edf7,0:16:36,Mal,,,Evento no registrado,Fin Interaccion
+7,unknown,Fumadores_Fila,unknown,0,Enter,f318e4a0-8632-4a7e-a752-a2ec2986a40a,2026-03-11 00:19:09,Bien,Mal,Mal,,
+7,unknown,Fumadores_Fila,unknown,0,Exit,f318e4a0-8632-4a7e-a752-a2ec2986a40a,2026-03-11 00:19:22,Bien,Mal,Mal,,
+7,unknown,Maquinas_Fumadores,unknown,0,Enter,f318e4a0-8632-4a7e-a752-a2ec2986a40a,2026-03-11 00:19:26,Bien,Mal,Mal,,
+7,unknown,Maquinas_Fumadores,unknown,0,Exit,f318e4a0-8632-4a7e-a752-a2ec2986a40a,2026-03-11 00:19:32,Bien,Mal,Mal,,
+7,unknown,Fumadores_Fila,unknown,0,Enter,f318e4a0-8632-4a7e-a752-a2ec2986a40a,2026-03-11 00:19:34,Bien,Mal,Mal,,
+7,unknown,Fumadores_Fila,unknown,0,Exit,f318e4a0-8632-4a7e-a752-a2ec2986a40a,2026-03-11 00:19:48,Bien,Mal,Mal,,
+7,,Fumadores_Fila,,,,N/A,0:22:41,Mal,,,Evento no registrado,Fin Interaccion
+7,unknown,Fumadores_Fila,unknown,0,Enter,84ba50a7-fa36-4ae8-b301-cae47d14bc91,2026-03-11 00:24:50,Bien,Mal,Mal,,
+7,unknown,Fumadores_Fila,unknown,0,Exit,84ba50a7-fa36-4ae8-b301-cae47d14bc91,2026-03-11 00:24:59,Bien,Mal,Mal,,
+7,,Fumadores_Fila,,,,e50d,0:24:51,Mal,,,Evento no registrado,Inicio Interaccion
+7,,Fumadores_Fila,,,,cb98,0:25:07,Mal,,,Evento no registrado,Permancia en zona
+7,,Fumadores_Fila,,,,1db8,0:25:23,Mal,,,Evento no registrado,Permancia en zona
+7,,Fumadores_Fila,,,,f094,0:27:34,Mal,,,Evento no registrado,Fin Interaccion
+7,,Maquinas_Fumadores,,,,0fc7,0:29:45,Mal,,,Evento no registrado,Inicio Interaccion
+7,unknown,Maquinas_Fumadores,unknown,0,Enter,b9b1dd8d-f732-449b-8de6-e103d38f53ec,2026-03-11 00:30:05,Bien,Mal,Mal,,
+7,unknown,Maquinas_Fumadores,unknown,0,Exit,b9b1dd8d-f732-449b-8de6-e103d38f53ec,2026-03-11 00:30:21,Bien,Mal,Mal,,
+7,,Fumadores_Fila,,,,001b,0:30:31,Mal,,,Evento no registrado,Fin Interaccion
+7,,Fumadores_Fila,,,,c756,0:31:14,Mal,,,Evento no registrado,Fin Interaccion
+7,,Fumadores_Fila,,,,N/A,0:31:50,Mal,,,Evento no registrado,Fin Interaccion
+7,,Fumadores_Fila,,,,b6eb,0:32:46,Mal,,,Evento no registrado,Fin Interaccion
+7,,Fumadores_Fila,,,,9f9f,0:33:47,Mal,,,Evento no registrado,Fin Interaccion
