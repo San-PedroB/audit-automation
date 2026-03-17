@@ -1,0 +1,35 @@
+# Entorno virtual
+.venv/
+env/
+venv/
+ENV/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Streamlit
+.streamlit/
+
+# Datos del proyecto (Opcional: descomentar si no quieres subir datos reales)
+Auditorias_Clientes/
+
+# Reportes generados
+Reporte_Auditoria_*.xlsx
+
+# Otros
+.DS_Store
+.vscode/
+.idea/
