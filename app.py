@@ -40,7 +40,6 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 st.title("📊 Auditoría de Video Analytics")
-st.markdown("---")
 
 # --- SIDEBAR: Configuración ---
 st.sidebar.header("Configuración de Auditoría")
@@ -68,8 +67,19 @@ if not fechas:
     st.stop()
     
 selected_fecha = st.sidebar.selectbox("Seleccione Fecha", fechas)
-work_dir = os.path.join(sucursal_path, selected_fecha)
-st.sidebar.markdown("---")
+
+# --- SUBTÍTULO DINÁMICO ---
+subtitle_html = f"""
+    <div style="margin-top: -15px; margin-bottom: 25px; margin-left: 2px;">
+        <span style="color: #555; font-size: 1.2rem; font-weight: 400;">
+            🏢 <b>{selected_empresa}</b> &nbsp;&nbsp;•&nbsp;&nbsp; 
+            📍 {selected_sucursal} &nbsp;&nbsp;•&nbsp;&nbsp; 
+            📅 {selected_fecha.replace('_', '-')}
+        </span>
+    </div>
+"""
+st.write(subtitle_html, unsafe_allow_html=True)
+st.markdown("---")
 uploaded_file = st.sidebar.file_uploader("Actualizar datos (opcional)", type=["csv"])
 
 if uploaded_file and selected_fecha:
@@ -250,9 +260,14 @@ if process_btn and selected_fecha:
                         'Eventos Correctos del Sistema', 'Eventos Reg. Mal (Sist.)', 'Identity Unknown', 'Cobertura Género', 'Cobertura Edad', 'Cobertura Identity'
                     ]
                     
-                    fmt_dict = {c: '{:.2%}' for c in pct_cols}
+                    fmt_dict = {}
+                    for c in pct_cols:
+                        if c in zona_row.columns:
+                            zona_row[c] = pd.to_numeric(zona_row[c], errors='coerce').fillna(0.0)
+                            fmt_dict[c] = '{:.2%}'
                     for c in count_cols:
                         if c in zona_row.columns:
+                            zona_row[c] = pd.to_numeric(zona_row[c], errors='coerce').fillna(0.0)
                             fmt_dict[c] = '{:.0f}'
                             
                     st.dataframe(zona_row.style.format(fmt_dict), hide_index=True)
@@ -267,12 +282,18 @@ if process_btn and selected_fecha:
                     'Cobertura Género', 'Cobertura Edad', 'Cobertura Identity'
                 ]
                 
-                fmt_dict_all = {c: '{:.2%}' for c in pct_cols_all}
+                final_df = results['reporte'].copy()
+                fmt_dict_all = {}
+                for c in pct_cols_all:
+                    if c in final_df.columns:
+                        final_df[c] = pd.to_numeric(final_df[c], errors='coerce').fillna(0.0)
+                        fmt_dict_all[c] = '{:.2%}'
                 for c in count_cols_all:
-                    if c in results['reporte'].columns:
+                    if c in final_df.columns:
+                        final_df[c] = pd.to_numeric(final_df[c], errors='coerce').fillna(0.0)
                         fmt_dict_all[c] = '{:.0f}'
                         
-                st.dataframe(results['reporte'].style.format(fmt_dict_all), use_container_width=True)
+                st.dataframe(final_df.style.format(fmt_dict_all), use_container_width=True)
 
             # Botón de Descarga
             with open(results['output_xlsx'], "rb") as file:

@@ -40,22 +40,44 @@ def process_audit_data(empresa, fecha, sucursal=None, input_filename='input.csv'
     group_cols = ['Camara', 'Zona_name'] if has_camera else ['Zona_name']
     
     def calculate_metrics(group):
+        # Asegurar columnas críticas con nombres alternativos o valores vacios si no existen
+        def get_col(df, names, default_val=None):
+            for name in names:
+                if name in df.columns:
+                    return df[name]
+            return pd.Series([default_val] * len(df))
+
+        # Mapeo de columnas comunes
+        c_identity = get_col(group, ['Identity_ID', 'ID_Identidad'])
+        c_event_audit = get_col(group, ['Event_Audit', 'Auditoria_Evento'], 'mal')
+        c_gender_audit = get_col(group, ['Gender_Audit', 'Auditoria_Genero'], 'mal')
+        c_age_audit = get_col(group, ['Age_Audit', 'Auditoria_Edad'], 'mal')
+        c_gender = get_col(group, ['Gender', 'Genero', 'Sexo'], 'unknown')
+        c_age = get_col(group, ['Age', 'Edad'], 0)
+
         total_eventos = len(group)
-        eventos_no_registrados = group['Identity_ID'].isna().sum() + \
-                                (group['Identity_ID'].astype(str).str.strip() == '').sum()
+        
+        # Determinar eventos no registrados (Identity_ID vacío o nulo)
+        eventos_no_registrados = c_identity.isna().sum() + \
+                                (c_identity.astype(str).str.strip() == '').sum()
+        
         eventos_registrados = total_eventos - eventos_no_registrados
-        precicion_eventos = group['Event_Audit'].astype(str).str.strip().str.lower().eq('bien').sum()
-        precision_genero = group['Gender_Audit'].astype(str).str.strip().str.lower().eq('bien').sum()
-        precision_edad = group['Age_Audit'].astype(str).str.strip().str.lower().eq('bien').sum()
-        genero_conocido = group['Gender'].notna() & (group['Gender'] != 'unknown')
+        
+        # Cálculos de precisión
+        precicion_eventos = c_event_audit.astype(str).str.strip().str.lower().eq('bien').sum()
+        precision_genero = c_gender_audit.astype(str).str.strip().str.lower().eq('bien').sum()
+        precision_edad = c_age_audit.astype(str).str.strip().str.lower().eq('bien').sum()
+        
+        genero_conocido = c_gender.notna() & (c_gender.astype(str).str.lower() != 'unknown')
         cobertura_genero = genero_conocido.sum()
-        edad_numerica = pd.to_numeric(group['Age'], errors='coerce')
+        
+        edad_numerica = pd.to_numeric(c_age, errors='coerce')
         edad_conocida = edad_numerica.notna() & (edad_numerica > 0)
         cobertura_edad = edad_conocida.sum()
-        identity_unknown = (group['Identity_ID'] == 'unknown').sum()
+        
+        identity_unknown = (c_identity.astype(str).str.lower() == 'unknown').sum()
         cobertura_identity = eventos_registrados - identity_unknown
         
-        # Nueva métrica: Registrados pero Incorrectos
         eventos_correctos = precicion_eventos
         eventos_registrados_mal = eventos_registrados - eventos_correctos
         def calc_pct(part, total):
@@ -78,11 +100,11 @@ def process_audit_data(empresa, fecha, sucursal=None, input_filename='input.csv'
             'Cobertura Género': cobertura_genero,
             '% Cobertura Género': calc_pct(cobertura_genero, eventos_registrados),
             'Precisión de Género': precision_genero,
-            '% Precisión de Género': calc_pct(precision_genero, cobertura_genero) if cobertura_genero > 0 else "N/A",
+            '% Precisión de Género': calc_pct(precision_genero, cobertura_genero) if cobertura_genero > 0 else 0.0,
             'Cobertura Edad': cobertura_edad,
             '% Cobertura Edad': calc_pct(cobertura_edad, eventos_registrados),
             'Precisión de Edad': precision_edad,
-            '% Precisión de Edad': calc_pct(precision_edad, cobertura_edad) if cobertura_edad > 0 else "N/A"
+            '% Precisión de Edad': calc_pct(precision_edad, cobertura_edad) if cobertura_edad > 0 else 0.0
         })
 
     # Agrupar por zona
