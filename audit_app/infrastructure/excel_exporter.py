@@ -19,11 +19,13 @@ def export_audit_report(
     work_dir: str,
     reporte: pd.DataFrame,
     chart_payloads: dict,
+    output_filename: str | None = None,
 ) -> str:
     central_template = os.path.join(os.getcwd(), "templates", "Template Tabla Maestra.xlsx")
     local_template = os.path.join(work_dir, "Template Tabla Maestra.xlsx")
     template_path = central_template if os.path.exists(central_template) else local_template
-    output_filename = os.path.join(work_dir, f"Reporte_Auditoria_Maestro_{empresa}.xlsx")
+    if not output_filename:
+        output_filename = os.path.join(work_dir, f"Reporte_Auditoria_Maestro_{empresa}.xlsx")
 
     if not os.path.exists(template_path):
         fallback_filename = os.path.join(work_dir, f"Reporte_Auditoria_{empresa}_{fecha}.xlsx")
@@ -73,6 +75,9 @@ def export_audit_report(
                 except Exception:
                     cell.value = 0
                 cell.number_format = "0"
+            elif column_name == "Tipo_sensor":
+                cell.value = str(value) if value is not None else ""
+                cell.number_format = "General"
             else:
                 cell.value = value if value is not None else ""
                 cell.number_format = "General"

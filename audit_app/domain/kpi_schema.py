@@ -36,6 +36,7 @@ KPI_COLUMNS = [
     "% Cobertura Edad",
     AGE_PRECISION,
     AGE_PRECISION_PCT,
+    "Tipo_sensor",
 ]
 
 COUNT_COLUMNS = [
@@ -134,5 +135,9 @@ DATA_TABLE_SECTIONS = {
         "% Cobertura Edad",
         AGE_PRECISION,
         AGE_PRECISION_PCT,
+    ],
+    "Sensor": [
+        "Zona",
+        "Tipo_sensor",
     ],
 }

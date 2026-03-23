@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import io
+import textwrap
 
 import matplotlib
 import matplotlib.pyplot as plt
@@ -96,6 +97,47 @@ def make_dual_bar_chart(
     return buffer.getvalue()
 
 
+def make_summary_bar_chart(labels, values, title, colors):
+    fig, ax = plt.subplots(figsize=(8, 6))
+    fig.patch.set_facecolor("white")
+
+    wrapped_labels = [textwrap.fill(label, width=18) for label in labels]
+    x_values = range(len(labels))
+    bars = ax.bar(x_values, values, color=colors, width=0.52, zorder=3)
+
+    ax.grid(axis="y", linestyle="-", color="#EEEEEE", alpha=0.8, zorder=0)
+    ax.set_xticks(list(x_values))
+    ax.set_xticklabels(wrapped_labels, rotation=0, ha="center", fontsize=10, fontweight="medium")
+    ax.tick_params(axis="y", labelsize=10, colors="#333333")
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
+    ax.spines["left"].set_color("#BBBBBB")
+    ax.spines["bottom"].set_color("#BBBBBB")
+    ax.set_title(title, pad=24, fontweight="bold", color="#1B2A4A", fontsize=16)
+
+    max_value = max(values) if values else 0
+    ax.set_ylim(0, max_value * 1.18 if max_value > 0 else 1)
+
+    for bar, value in zip(bars, values):
+        ax.annotate(
+            f"{int(value)}",
+            xy=(bar.get_x() + bar.get_width() / 2, bar.get_height()),
+            xytext=(0, 6),
+            textcoords="offset points",
+            ha="center",
+            va="bottom",
+            fontsize=10,
+            fontweight="bold",
+            color="#1B2A4A",
+        )
+
+    plt.tight_layout()
+    buffer = io.BytesIO()
+    plt.savefig(buffer, format="png", dpi=120, bbox_inches="tight")
+    plt.close(fig)
+    return buffer.getvalue()
+
+
 def build_chart_payloads(df_grafico: pd.DataFrame, df_total: pd.DataFrame) -> dict:
     zone_labels = df_grafico["Zona"].astype(str).tolist()
     total_values = to_num(df_grafico["Total Eventos"]).tolist()
@@ -115,7 +157,6 @@ def build_chart_payloads(df_grafico: pd.DataFrame, df_total: pd.DataFrame) -> di
     img_totales_bytes = None
     if not df_total.empty:
         total_row = df_total.iloc[0]
-        fig, ax = plt.subplots(figsize=(6, 5))
         categories = [
             "Total Eventos",
             "Eventos Registrados por el Sistema",
@@ -129,13 +170,12 @@ def build_chart_payloads(df_grafico: pd.DataFrame, df_total: pd.DataFrame) -> di
                 total_row["Eventos Correctos del Sistema"],
             ]
         ]
-        ax.bar(categories, values, color=["#1B2A4A", "#2C5282", "#C0392B"], width=0.5)
-        ax.set_title("Resumen de KPIs de la Tabla Maestra", pad=20, fontweight="bold")
-        plt.tight_layout()
-        buffer = io.BytesIO()
-        plt.savefig(buffer, format="png", dpi=120)
-        plt.close(fig)
-        img_totales_bytes = buffer.getvalue()
+        img_totales_bytes = make_summary_bar_chart(
+            categories,
+            values,
+            "Resumen de KPIs de la Tabla Maestra",
+            ["#1B2A4A", "#2C5282", "#C0392B"],
+        )
         img_totales = io.BytesIO(img_totales_bytes)
 
     camera_images = []

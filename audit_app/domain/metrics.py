@@ -88,13 +88,36 @@ def calculate_group_metrics(group: pd.DataFrame) -> pd.Series:
     )
 
 
-def build_audit_report(df: pd.DataFrame, fecha: str) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
-    df_zones = df[df["Zona_name"].notna() & (df["Zona_name"] != "")].copy()
-    has_camera = "Camara" in df_zones.columns
-    group_columns = ["Camara", "Zona_name"] if has_camera else ["Zona_name"]
+def ensure_audit_metadata(df: pd.DataFrame, default_fecha: str) -> pd.DataFrame:
+    normalized_date = default_fecha.replace("_", "-") if default_fecha else ""
+    metadata_df = df.copy()
 
+    if "Fecha" not in metadata_df.columns:
+        metadata_df["Fecha"] = normalized_date
+    else:
+        metadata_df["Fecha"] = metadata_df["Fecha"].fillna("").replace("", normalized_date)
+
+    if "Hora_inicio" not in metadata_df.columns:
+        metadata_df["Hora_inicio"] = ""
+    else:
+        metadata_df["Hora_inicio"] = metadata_df["Hora_inicio"].fillna("")
+
+    if "Hora_termino" not in metadata_df.columns:
+        metadata_df["Hora_termino"] = ""
+    else:
+        metadata_df["Hora_termino"] = metadata_df["Hora_termino"].fillna("")
+
+    if "Tipo_sensor" not in metadata_df.columns:
+        metadata_df["Tipo_sensor"] = ""
+    else:
+        metadata_df["Tipo_sensor"] = metadata_df["Tipo_sensor"].fillna("").astype(str).str.strip()
+
+    return metadata_df
+
+
+def build_grouped_report(df: pd.DataFrame, group_columns: list[str], has_camera: bool) -> pd.DataFrame:
     report = (
-        df_zones.groupby(group_columns)
+        df.groupby(group_columns)
         .apply(calculate_group_metrics, include_groups=False)
         .reset_index()
     )
@@ -105,22 +128,52 @@ def build_audit_report(df: pd.DataFrame, fecha: str) -> tuple[pd.DataFrame, pd.D
         report.rename(columns={"Zona_name": "Zona"}, inplace=True)
         report[CAMERA_COLUMN] = ""
 
-    normalized_date = fecha.replace("_", "-")
-    report["Fecha"] = normalized_date
-    report["Hora_inicio"] = ""
-    report["Hora_termino"] = ""
+    if "Fecha" not in report.columns:
+        report["Fecha"] = ""
+    if "Hora_inicio" not in report.columns:
+        report["Hora_inicio"] = ""
+    if "Hora_termino" not in report.columns:
+        report["Hora_termino"] = ""
+
+    ordered_columns = [column for column in KPI_COLUMNS if column in report.columns]
+    report = report[ordered_columns]
+    return report
+
+
+def build_audit_report(df: pd.DataFrame, default_fecha: str = "") -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    df_zones = df[df["Zona_name"].notna() & (df["Zona_name"] != "")].copy()
+    df_zones = ensure_audit_metadata(df_zones, default_fecha)
+
+    has_camera = "Camara" in df_zones.columns
+    detail_group_columns = ["Fecha", "Hora_inicio", "Hora_termino", "Tipo_sensor"]
+    if has_camera:
+        detail_group_columns.append("Camara")
+    detail_group_columns.append("Zona_name")
+
+    report = build_grouped_report(df_zones, detail_group_columns, has_camera)
+    report.sort_values(
+        by=["Fecha", "Hora_inicio", "Hora_termino", "Tipo_sensor", CAMERA_COLUMN, "Zona"],
+        inplace=True,
+        ignore_index=True,
+    )
+
+    chart_group_columns = ["Zona_name"]
+    if has_camera:
+        chart_group_columns.insert(0, "Camara")
+    chart_df = build_grouped_report(df_zones, chart_group_columns, has_camera)
+    chart_df.sort_values(by=[CAMERA_COLUMN, "Zona"], inplace=True, ignore_index=True)
 
     totals = calculate_group_metrics(df_zones)
     totals["Zona"] = "TOTAL"
     totals[CAMERA_COLUMN] = ""
-    totals["Fecha"] = normalized_date
+    totals["Fecha"] = ""
     totals["Hora_inicio"] = ""
     totals["Hora_termino"] = ""
+    totals["Tipo_sensor"] = ""
 
-    report = pd.concat([report, pd.DataFrame(totals).T], ignore_index=True)
-    ordered_columns = [column for column in KPI_COLUMNS if column in report.columns]
-    report = report[ordered_columns]
+    totals_df = pd.DataFrame(totals).T
+    ordered_columns = [column for column in KPI_COLUMNS if column in totals_df.columns]
+    totals_df = totals_df[ordered_columns]
 
-    chart_df = report[report["Zona"] != "TOTAL"].copy()
-    total_df = report[report["Zona"] == "TOTAL"].copy()
-    return report, chart_df, total_df
+    report = pd.concat([report, totals_df], ignore_index=True)
+    return report, chart_df, totals_df
