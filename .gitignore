@@ -23,12 +23,6 @@ coverage.xml
 # Streamlit
 .streamlit/
 
-# Datos del proyecto (Opcional: descomentar si no quieres subir datos reales)
-Auditorias_Clientes/
-
-# Reportes generados
-Reporte_Auditoria_*.xlsx
-
 # Otros
 .DS_Store
 .vscode/

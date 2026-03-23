@@ -1,0 +1,184 @@
+Camara,Tipo_sensor,Identity_ID,Zona_name,Gender,Age,Action,Track_ID,Time,Event_Audit,Gender_Audit,Age_Audit,Observation_A,Observation_B,
+1,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Exploracion 1,Female,0,Enter,94e832f8-3302-4d19-868c-59d2e43ff886,2026-02-18 17:05:33,Bien,Bien,Mal,,,
+1,Linea_conteo,62b16341-5c73-4a5e-90da-13e261900425,Entrada,Female,0,Enter,94e832f8-3302-4d19-868c-59d2e43ff886,2026-02-18 17:05:33,Bien,Bien,Mal,,,
+1,Linea_conteo,62b16341-5c73-4a5e-90da-13e261900425,Exterior L,Female,0,Enter,94e832f8-3302-4d19-868c-59d2e43ff886,2026-02-18 17:05:33,Bien,Bien,Mal,,,
+1,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Exploracion 1,Female,0,Exit,94e832f8-3302-4d19-868c-59d2e43ff886,2026-02-18 17:05:41,Bien,Bien,Mal,Oclusión genera cambio de ID,,
+1,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Exploracion 1,Female,0,Enter,71dce537-8a61-431a-9466-5f61b81f99c3,2026-02-18 17:05:46,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Entrada,Female,0,Enter,db72af7e-8c23-4c52-b429-0740455795ef,2026-02-18 17:05:50,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior L,Female,0,Enter,db72af7e-8c23-4c52-b429-0740455795ef,2026-02-18 17:05:50,Bien,Bien,Mal,,,
+1,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Exploracion 1,Female,0,Exit,71dce537-8a61-431a-9466-5f61b81f99c3,2026-02-18 17:06:05,Bien,Bien,Mal,,,
+1,Linea_conteo,,Exterior 2,,,Enter,c760,17:06:26,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior L,Female,0,Exit,17471179-eee8-4f4c-abb0-df9f668d1202,2026-02-18 17:15:40,Bien,Bien,Mal,,,
+1,Linea_conteo,,Exterior L,,,Enter,bad7,17:15:49,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior 2,,,Enter,3fbb,17:15:56,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior 2,,,Enter,9a1a,17:16:07,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior 2,,,Enter,5f5b,17:16:21,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior 2,,,Enter,2986,17:16:22,Mal,,,,Evento no registrado,No registra conteo
+1,Linea_conteo,,Exterior L,,,Enter,ef3f,17:16:46,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior L,,,Enter,d5de,17:16:53,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior L,,,Enter,"""3e27""",17:17:12,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior 2,,,Enter,e8ec,17:17:21,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior 2,,,Enter,16d0,17:17:37,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior 2,,,Enter,e4e5,17:17:42,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior L,,,Enter,2586,17:17:56,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior 2,,,Enter,ef5b,17:18:05,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior L,,,Enter,da11,17:18:09,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior L,Male,0,Enter,7b041a17-81f1-4d30-a714-1e5120df9ce5,2026-02-18 17:18:28,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior 2,Male,0,Exit,7b041a17-81f1-4d30-a714-1e5120df9ce5,2026-02-18 17:18:28,Bien,Bien,Mal,,,
+1,Linea_conteo,,Exterior L,,,Enter,388d,17:18:32,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior 2,,,Enter,5c72,17:18:41,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior L,Male,0,Enter,2a40dd9d-6f0e-4354-8499-894452f40840,2026-02-18 17:18:45,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior 2,Male,0,Exit,2a40dd9d-6f0e-4354-8499-894452f40840,2026-02-18 17:18:45,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior L,Male,0,Enter,a3ee6a31-5181-464f-84e6-b8e3888c4197,2026-02-18 17:18:46,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior 2,Male,0,Exit,a3ee6a31-5181-464f-84e6-b8e3888c4197,2026-02-18 17:18:46,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior 2,Male,0,Enter,e7945890-760d-4abf-b04b-11eb9c4c06f6,2026-02-18 17:19:00,Bien,Mal,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior L,Male,0,Exit,e7945890-760d-4abf-b04b-11eb9c4c06f6,2026-02-18 17:19:00,Bien,Mal,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior 2,Male,0,Enter,b5d7351d-ff0b-4844-ae61-ea0bef1f9ef5,2026-02-18 17:19:05,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior L,Male,0,Exit,b5d7351d-ff0b-4844-ae61-ea0bef1f9ef5,2026-02-18 17:19:05,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior 2,Male,0,Enter,7ac2ec18-1876-4a15-ab0e-4c93c3d7bf5e,2026-02-18 17:19:45,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior L,Male,0,Exit,7ac2ec18-1876-4a15-ab0e-4c93c3d7bf5e,2026-02-18 17:19:45,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior 2,Male,0,Enter,19e6ed4b-b8af-4478-af32-df974ff8b0b0,2026-02-18 17:19:46,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior L,Male,0,Exit,19e6ed4b-b8af-4478-af32-df974ff8b0b0,2026-02-18 17:19:46,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior 2,Male,0,Enter,dfcf0fb9-2b44-4eb2-bc8f-64c00567f19e,2026-02-18 17:19:48,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior L,Male,0,Exit,dfcf0fb9-2b44-4eb2-bc8f-64c00567f19e,2026-02-18 17:19:48,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior 2,Male,0,Enter,213df134-8974-4e25-880f-8380e943db00,2026-02-18 17:20:56,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior L,Male,0,Exit,213df134-8974-4e25-880f-8380e943db00,2026-02-18 17:20:56,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior L,Male,0,Enter,e4fcf456-171c-45d7-bac4-fef14291308b,2026-02-18 17:21:14,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior 2,Male,0,Exit,e4fcf456-171c-45d7-bac4-fef14291308b,2026-02-18 17:21:14,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior L,Female,0,Enter,a7b77809-ac6c-4f2a-8e51-272df7fa94ee,2026-02-18 17:21:16,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior 2,Female,0,Exit,a7b77809-ac6c-4f2a-8e51-272df7fa94ee,2026-02-18 17:21:16,Bien,Bien,Mal,,,
+1,Linea_conteo,,Exterior 2,,,Enter,7f43,17:21:20,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior 2,,,Enter,af55,17:21:42,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior L,,,Enter,b5b6,17:21:43,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior L,Female,0,Enter,7fa08dfa-ec8b-4bb4-968b-40e675436e15,2026-02-18 17:21:49,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior 2,Female,0,Exit,7fa08dfa-ec8b-4bb4-968b-40e675436e15,2026-02-18 17:21:49,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior L,Female,0,Enter,9b20922b-cde1-4944-b891-0619ee5a3220,2026-02-18 17:21:54,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior 2,Female,0,Exit,9b20922b-cde1-4944-b891-0619ee5a3220,2026-02-18 17:21:54,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior L,Male,0,Enter,ab9fcd04-a83b-4261-a99c-72e393418156,2026-02-18 17:21:57,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior 2,Male,0,Exit,ab9fcd04-a83b-4261-a99c-72e393418156,2026-02-18 17:21:57,Bien,Bien,Mal,,,
+1,Linea_conteo,,Exterior 2,,,Enter,3f22,17:22:00,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior 2,,,Enter,8c35,17:22:02,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,55dfb884-27dc-43fc-9962-57829d4fbea5,Entrada,Female,0,Enter,5cb11ff3-9c19-4329-8ee8-22999293d19b,2026-02-18 17:22:07,Bien,Bien,Mal,,,
+1,Linea_conteo,55dfb884-27dc-43fc-9962-57829d4fbea5,Exterior L,Female,0,Enter,5cb11ff3-9c19-4329-8ee8-22999293d19b,2026-02-18 17:22:07,Bien,Bien,Mal,,,
+1,Linea_conteo,55dfb884-27dc-43fc-9962-57829d4fbea5,Entrada,Female,0,Exit,5cb11ff3-9c19-4329-8ee8-22999293d19b,2026-02-18 17:22:30,Bien,Bien,Mal,,,
+1,Linea_conteo,55dfb884-27dc-43fc-9962-57829d4fbea5,Exterior L,Female,0,Exit,5cb11ff3-9c19-4329-8ee8-22999293d19b,2026-02-18 17:22:30,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior L,Male,0,Enter,b319e75a-97f0-4fb1-9783-917aab51eaca,2026-02-18 17:22:34,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior 2,Male,0,Exit,b319e75a-97f0-4fb1-9783-917aab51eaca,2026-02-18 17:22:34,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior 2,Male,0,Enter,cdbbf5d2-816d-40c2-9c3b-5d25d5c602c0,2026-02-18 17:22:37,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior L,Male,0,Exit,cdbbf5d2-816d-40c2-9c3b-5d25d5c602c0,2026-02-18 17:22:37,Bien,Bien,Mal,,,
+1,Linea_conteo,,Exterior 2,,,Enter,0b91,17:22:44,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior 2,Male,0,Enter,3278192f-5a76-4b3a-8a2f-dbabc4239505,2026-02-18 17:22:47,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior L,Male,0,Exit,3278192f-5a76-4b3a-8a2f-dbabc4239505,2026-02-18 17:22:47,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior L,Male,0,Enter,fedf780a-1608-4cd1-8c50-c0dee0b96eed,2026-02-18 17:23:00,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior 2,Male,0,Exit,fedf780a-1608-4cd1-8c50-c0dee0b96eed,2026-02-18 17:23:00,Bien,Bien,Mal,,,
+1,Linea_conteo,,Exterior L,,,Enter,2b39,17:23:00,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior L,,,Enter,7e1f,17:23:05,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior 2,,,Enter,3dad,17:23:14,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior 2,,,Enter,5bcb,17:23:21,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior L,Male,0,Enter,db228c71-1cbe-4f15-ab7b-5252955404ba,2026-02-18 17:23:27,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior 2,Male,0,Exit,db228c71-1cbe-4f15-ab7b-5252955404ba,2026-02-18 17:23:28,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior L,Female,0,Enter,db8759f9-0a9b-401b-8ed8-31237961d1c4,2026-02-18 17:23:28,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior 2,Female,0,Exit,db8759f9-0a9b-401b-8ed8-31237961d1c4,2026-02-18 17:23:29,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior L,Male,0,Enter,58f15836-541a-4960-befb-67797c880af7,2026-02-18 17:23:48,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior 2,Male,0,Exit,58f15836-541a-4960-befb-67797c880af7,2026-02-18 17:23:48,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior 2,Male,0,Enter,e9daed5f-cf8e-419f-aa25-a5a627efb4d0,2026-02-18 17:23:52,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior L,Male,0,Exit,e9daed5f-cf8e-419f-aa25-a5a627efb4d0,2026-02-18 17:23:52,Bien,Bien,Mal,,,
+1,Linea_conteo,,Exterior 2,,,Enter,ee31,17:23:58,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior 2,,,Enter,e1f5,17:24:06,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior L,Male,0,Enter,326432bc-f201-42a4-8418-695ffd861ef1,2026-02-18 17:24:17,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior 2,Male,0,Exit,326432bc-f201-42a4-8418-695ffd861ef1,2026-02-18 17:24:18,Bien,Bien,Mal,,,
+1,Linea_conteo,,Exterior L,,,Enter,bc8c,17:24:19,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior L,,,Enter,1eb6,17:24:29,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior L,Female,0,Enter,ae7ba926-c553-4ed2-bed1-acbedc14dbb0,2026-02-18 17:24:36,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior 2,Female,0,Exit,ae7ba926-c553-4ed2-bed1-acbedc14dbb0,2026-02-18 17:24:36,Bien,Bien,Mal,,,
+1,Linea_conteo,,Exterior 2,,,Enter,7b50,17:24:58,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior 2,,,Enter,3f61,17:24:58,Mal,,,,Evento no registrado,No registra conteo
+1,Linea_conteo,62b16341-5c73-4a5e-90da-13e261900425,Entrada,Female,0,Exit,4f0bc6d1-d9ed-4e8f-bb8c-e4ac02ae33e6,2026-02-18 17:25:42,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Entrada,Female,0,Exit,80cb00c7-ed27-4fa2-acc3-7efe5b62b0c0,2026-02-18 17:25:42,Bien,Bien,Mal,,,
+1,Linea_conteo,62b16341-5c73-4a5e-90da-13e261900425,Exterior 2,Female,0,Exit,4f0bc6d1-d9ed-4e8f-bb8c-e4ac02ae33e6,2026-02-18 17:25:44,Bien,Bien,Mal,,,
+1,Linea_conteo,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exterior 2,Female,0,Exit,80cb00c7-ed27-4fa2-acc3-7efe5b62b0c0,2026-02-18 17:25:45,Bien,Bien,Mal,,,
+1,Linea_conteo,,Exterior L,,,Enter,d6b8,17:25:48,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior L,,,Enter,30f7,17:26:03,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior 2,,,Enter,47ee,17:26:16,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior 2,,,Enter,f799,17:26:20,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior L,,,Enter,644e,17:26:31,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior 2,,,Enter,9b01,17:26:31,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior 2,,,Enter,2dd1,12:26:39,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior 2,,,Enter,1b8a,12:26:39,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior 2,,,Enter,a5e4,12:27:00,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,8c2c1be7-b9a6-49c3-ae66-cbe74b59d11a,Entrada,Male,0,Enter,21a637a5-7265-42be-8b26-5ae175ef330f,2026-02-18 17:27:19,Bien,Bien,Mal,,,
+1,Linea_conteo,,Exterior 2,,,Enter,"""41e5""",12:27:20,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior 2,,,Enter,f48e,12:27:31,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior 2,,,Enter,7520,14:35:00,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior 2,,,Enter,7661,17:27:48,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior 2,,,Enter,44dd0,17:28:10,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior 2,,,Enter,91b9,17:28:11,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior L,,,Enter,9878,17:28:40,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior L,,,Enter,68cf,17:28:42,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior L,,,Enter,2e1e,17:28:42,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior L,,,Enter,c20e,17:28:59,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior L,,,Enter,cb5b,17:28:59,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,8c2c1be7-b9a6-49c3-ae66-cbe74b59d11a,Entrada,Male,0,Exit,143452fa-e259-445f-8d8b-d8d492d3f2ff,2026-02-18 17:29:50,Bien,Mal,Mal,,,
+1,Linea_conteo,8c2c1be7-b9a6-49c3-ae66-cbe74b59d11a,Exterior 2,Male,0,Exit,143452fa-e259-445f-8d8b-d8d492d3f2ff,2026-02-18 17:29:51,Bien,,Mal,,,
+1,Linea_conteo,,Exterior L,,,Enter,63bb,17:29:50,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior 2,,,,cab2,17:29:57,Mal,,,,Evento no registrado,Solo registra conteo
+1,Linea_conteo,,Exterior 2,,,,"""08e8""",17:29:57,Mal,,,,Evento no registrado,Solo registra conteo
+2,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Interior 1,Female,0,Enter,7e2e15a2-30e2-4898-bde3-0e3089e30bb6,18/02/2026 17:22:41,Bien,Bien,Mal,,,
+2,Zona_permanencia,c94efb2e-dc3a-4540-a402-f869a4e92d87,Interior 1,Female,0,Enter,eaa7c852-9078-42ef-af03-4db790a44d8c,18/02/2026 17:22:41,Bien,Bien,Mal,,,
+2,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Interior 1,Female,0,Exit,7e2e15a2-30e2-4898-bde3-0e3089e30bb6,18/02/2026 17:22:57,Bien,Bien,Mal,,,
+2,Zona_permanencia,c94efb2e-dc3a-4540-a402-f869a4e92d87,Interior 1,Female,0,Exit,eaa7c852-9078-42ef-af03-4db790a44d8c,18/02/2026 17:23:06,Bien,Bien,Mal,,,
+3,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Exploracion 3,Female,0,Enter,62857f47-309f-4798-93ba-92a985cba138,18/02/2026 17:07:20,Bien,Bien,Mal,,,
+3,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Exploracion 3,Female,0,Exit,62857f47-309f-4798-93ba-92a985cba138,18/02/2026 17:07:38,Bien,Bien,Mal,,,
+3,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Caja,Female,0,Enter,268dbe9c-11a6-4f16-85b9-668695f27ffb,18/02/2026 17:12:58,Bien,Bien,Mal,,,
+3,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Caja,Female,0,Exit,268dbe9c-11a6-4f16-85b9-668695f27ffb,18/02/2026 17:14:39,Bien,Bien,Mal,,,
+3,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Caja,Female,0,Enter,268dbe9c-11a6-4f16-85b9-668695f27ffb,18/02/2026 17:14:58,Bien,Bien,Mal,,,
+3,Zona_permanencia,c94efb2e-dc3a-4540-a402-f869a4e92d87,Estanteria Principal,Female,0,Enter,c012cf91-7e72-4a32-bcae-bed1c76c884f,18/02/2026 17:15:25,Bien,Bien,Mal,,,
+3,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Caja,Female,0,Exit,268dbe9c-11a6-4f16-85b9-668695f27ffb,18/02/2026 17:15:27,Bien,Bien,Mal,,,
+3,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Estanteria Principal,Female,0,Enter,ffeaa747-8c03-484b-b436-b10a9b78d0b3,18/02/2026 17:15:30,Bien,Bien,Mal,,,
+3,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Estanteria Principal,Female,0,Exit,ffeaa747-8c03-484b-b436-b10a9b78d0b3,18/02/2026 17:15:44,Bien,Bien,Mal,,,
+3,Zona_permanencia,c94efb2e-dc3a-4540-a402-f869a4e92d87,Estanteria Principal,Female,0,Exit,c012cf91-7e72-4a32-bcae-bed1c76c884f,18/02/2026 17:16:04,Bien,Bien,Mal,Oclusión genera cambio de ID,,
+3,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Estanteria Principal,Female,0,Enter,f3a7f951-7634-43b1-b5d3-43cfa95c6474,18/02/2026 17:16:04,Bien,Bien,Mal,,,
+3,Zona_permanencia,c94efb2e-dc3a-4540-a402-f869a4e92d87,Estanteria Principal,Female,0,Enter,add249fa-f9f0-43a6-aa41-1bdb22fe1995,18/02/2026 17:16:04,Bien,Bien,Mal,,,
+3,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Estanteria Principal,Female,0,Exit,f3a7f951-7634-43b1-b5d3-43cfa95c6474,18/02/2026 17:16:13,Bien,Bien,Mal,,,
+3,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Estanteria Principal,Female,0,Enter,f3a7f951-7634-43b1-b5d3-43cfa95c6474,18/02/2026 17:16:20,Bien,Bien,Mal,,,
+3,Zona_permanencia,c94efb2e-dc3a-4540-a402-f869a4e92d87,Estanteria Principal,Female,0,Exit,add249fa-f9f0-43a6-aa41-1bdb22fe1995,18/02/2026 17:16:48,Bien,Bien,Mal,,,
+3,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Estanteria Principal,Female,0,Exit,f3a7f951-7634-43b1-b5d3-43cfa95c6474,18/02/2026 17:16:52,Bien,Bien,Mal,,,
+3,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Caja,Female,0,Enter,a6b54760-1469-4870-8b1c-7cf556d9c5bf,18/02/2026 17:17:03,Bien,Bien,Mal,,,
+3,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Caja,Female,0,Exit,a6b54760-1469-4870-8b1c-7cf556d9c5bf,18/02/2026 17:17:47,Bien,Bien,Mal,Oclusión genera cambio de ID,,
+3,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Exploracion 3,Female,0,Enter,43e5d536-3ac7-469c-bbb8-bbd0c9c62df5,18/02/2026 17:17:54,Bien,Bien,Mal,,,
+3,Zona_permanencia,c94efb2e-dc3a-4540-a402-f869a4e92d87,Estanteria Principal,Female,0,Enter,3b1c104f-41f5-4a32-a89d-eccbfed189f3,18/02/2026 17:18:02,Bien,Bien,Mal,,,
+3,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Exploracion 3,Female,0,Exit,43e5d536-3ac7-469c-bbb8-bbd0c9c62df5,18/02/2026 17:18:08,Bien,Bien,Mal,,,
+3,Zona_permanencia,c94efb2e-dc3a-4540-a402-f869a4e92d87,Estanteria Principal,Female,0,Exit,3b1c104f-41f5-4a32-a89d-eccbfed189f3,18/02/2026 17:18:09,Bien,Bien,Mal,,,
+3,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Exploracion 2,Female,0,Enter,43e5d536-3ac7-469c-bbb8-bbd0c9c62df5,18/02/2026 17:18:11,Bien,Bien,Mal,,,
+3,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Exploracion 2,Female,0,Exit,43e5d536-3ac7-469c-bbb8-bbd0c9c62df5,18/02/2026 17:18:57,Bien,Bien,Mal,,,
+3,Zona_permanencia,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exploracion 2,Female,0,Enter,3b1c104f-41f5-4a32-a89d-eccbfed189f3,18/02/2026 17:19:03,Bien,Bien,Mal,,,
+3,Zona_permanencia,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exploracion 2,Female,0,Exit,3b1c104f-41f5-4a32-a89d-eccbfed189f3,18/02/2026 17:19:19,Bien,Bien,Mal,Oclusión genera cambio de ID,,
+3,Zona_permanencia,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exploracion 2,Female,0,Enter,c37d1f41-40ce-45be-a85f-3a9d548d2f36,18/02/2026 17:19:22,Bien,Bien,Mal,,,
+3,Zona_permanencia,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exploracion 2,Female,0,Exit,c37d1f41-40ce-45be-a85f-3a9d548d2f36,18/02/2026 17:19:30,Bien,Bien,Mal,,,
+3,Zona_permanencia,c94efb2e-dc3a-4540-a402-f869a4e92d87,Estanteria Principal,Female,0,Enter,c37d1f41-40ce-45be-a85f-3a9d548d2f36,18/02/2026 17:19:31,Bien,Bien,Mal,,,
+3,Zona_permanencia,c94efb2e-dc3a-4540-a402-f869a4e92d87,Estanteria Principal,Female,0,Exit,c37d1f41-40ce-45be-a85f-3a9d548d2f36,18/02/2026 17:19:38,Bien,Bien,Mal,,,
+3,Zona_permanencia,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exploracion 2,Female,0,Enter,c37d1f41-40ce-45be-a85f-3a9d548d2f36,18/02/2026 17:19:39,Bien,Bien,Mal,,,
+3,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Estanteria Principal,Female,0,Enter,98eaede7-563d-4286-bfb0-c586b1c6db93,18/02/2026 17:19:47,Bien,Bien,Mal,,,
+3,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Estanteria Principal,Female,0,Enter,e75a89f4-1e29-4a4b-858f-34c5ec60cce0,18/02/2026 17:20:00,Bien,Bien,Mal,,,
+3,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Estanteria Principal,Female,0,Exit,98eaede7-563d-4286-bfb0-c586b1c6db93,18/02/2026 17:20:02,Bien,Bien,Mal,,,
+3,Zona_permanencia,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exploracion 2,Female,0,Exit,c37d1f41-40ce-45be-a85f-3a9d548d2f36,18/02/2026 17:20:02,Bien,Bien,Mal,,,
+3,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Exploracion 2,Female,0,Enter,98eaede7-563d-4286-bfb0-c586b1c6db93,18/02/2026 17:20:18,Bien,Bien,Mal,,,
+3,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Estanteria Principal,Female,0,Exit,e75a89f4-1e29-4a4b-858f-34c5ec60cce0,18/02/2026 17:20:21,Bien,Bien,Mal,,,
+3,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Exploracion 2,Female,0,Exit,98eaede7-563d-4286-bfb0-c586b1c6db93,18/02/2026 17:20:30,Bien,Bien,Mal,,,
+3,Zona_permanencia,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exploracion 3,Female,0,Enter,c37d1f41-40ce-45be-a85f-3a9d548d2f36,18/02/2026 17:21:10,Bien,Bien,Mal,,,
+3,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Caja,Female,0,Enter,158c5e88-5eff-44a4-bd92-4767f87b0050,18/02/2026 17:21:11,Bien,Bien,Mal,,,
+3,Zona_permanencia,c94efb2e-dc3a-4540-a402-f869a4e92d87,Exploracion 3,Female,0,Exit,c37d1f41-40ce-45be-a85f-3a9d548d2f36,18/02/2026 17:21:16,Bien,Bien,Mal,,,
+3,Zona_permanencia,,Exploracion 2,,,Enter,0a80,17:22:10,Mal,,,,Evento no registrado,
+3,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Caja,Female,0,Exit,158c5e88-5eff-44a4-bd92-4767f87b0050,18/02/2026 17:22:17,Bien,Bien,Mal,,,
+3,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Estanteria Principal,Female,0,Enter,bca8e6c3-0e9b-4e3a-bb1a-a4e640c9443e,18/02/2026 17:22:54,Bien,Bien,Mal,,,
+3,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Estanteria Principal,Female,0,Exit,bca8e6c3-0e9b-4e3a-bb1a-a4e640c9443e,18/02/2026 17:23:04,Bien,Bien,Mal,,,
+3,Zona_permanencia,c94efb2e-dc3a-4540-a402-f869a4e92d87,Caja,Female,0,Enter,2385b1fd-1f32-48bb-b5ab-1e4bb46ee9d0,18/02/2026 17:23:10,Bien,Bien,Mal,,,
+3,Zona_permanencia,c94efb2e-dc3a-4540-a402-f869a4e92d87,Caja,Female,0,Exit,2385b1fd-1f32-48bb-b5ab-1e4bb46ee9d0,18/02/2026 17:25:31,Bien,Bien,Mal,,,
+3,Zona_permanencia,8c2c1be7-b9a6-49c3-ae66-cbe74b59d11a,Caja,Male,0,Enter,d91fc787-2d87-4ea4-95c6-36dbe9b76bba,18/02/2026 17:27:24,Bien,Bien,Mal,,,
+3,Zona_permanencia,8c2c1be7-b9a6-49c3-ae66-cbe74b59d11a,Caja,Male,0,Exit,d91fc787-2d87-4ea4-95c6-36dbe9b76bba,18/02/2026 17:28:13,Bien,Bien,Mal,Oclusión genera cambio de ID,,
+3,Zona_permanencia,8c2c1be7-b9a6-49c3-ae66-cbe74b59d11a,Caja,Male,0,Enter,32e68f37-6e61-4f47-b322-23380f6472d2,18/02/2026 17:28:16,Bien,Bien,Mal,,,
+3,Zona_permanencia,8c2c1be7-b9a6-49c3-ae66-cbe74b59d11a,Caja,Male,0,Exit,32e68f37-6e61-4f47-b322-23380f6472d2,18/02/2026 17:28:48,Bien,Bien,Mal,Oclusión genera cambio de ID,,
+3,Zona_permanencia,8c2c1be7-b9a6-49c3-ae66-cbe74b59d11a,Caja,Male,0,Enter,1841a161-e453-41bb-a5ca-da40bc6c0a29,18/02/2026 17:28:59,Bien,Bien,Mal,,,
+3,Zona_permanencia,8c2c1be7-b9a6-49c3-ae66-cbe74b59d11a,Caja,Male,0,Exit,1841a161-e453-41bb-a5ca-da40bc6c0a29,18/02/2026 17:29:41,Bien,Bien,Mal,,,
+4,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Interior 2,Female,0,Enter,8f0fb35c-d5e4-4e84-a1ca-63bde7a93b98,2026-02-18 17:22:58,Bien,Bien,Mal,,,
+4,Zona_permanencia,62b16341-5c73-4a5e-90da-13e261900425,Interior 2,Female,0,Exit,8f0fb35c-d5e4-4e84-a1ca-63bde7a93b98,2026-02-18 17:23:04,Bien,Bien,Mal,,,
