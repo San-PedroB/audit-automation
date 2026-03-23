@@ -274,6 +274,8 @@ def process_audit_data(
         work_dir,
         reporte,
         chart_payloads,
+        df_grafico=df_grafico,
+        df_total=df_total,
         output_filename=build_output_filename(empresa, sucursal, mode, work_dir, fecha, sources),
     )
 

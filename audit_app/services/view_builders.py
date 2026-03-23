@@ -475,15 +475,20 @@ def build_zone_view_data(results: dict) -> dict:
         "% Eventos Correctos sobre Total",
     ]
 
-    zones = []
+    zones_data = []
     for index, img_data in enumerate(results["zone_images"]):
         zone_name = img_data["label"]
         zone_row = results["df_grafico"][results["df_grafico"]["Zona"] == zone_name].copy()
+        if zone_row.empty:
+            continue
+        cam = zone_row.iloc[0].get(CAMERA_COLUMN, "General")
+        cam_label = _format_camera_label(cam)
+        
         zone_metrics = zone_row.iloc[0]
-        zones.append(
+        zones_data.append(
             {
+                "camera_label": cam_label,
                 "label": zone_name,
-                "expanded": index == 0,
                 "metrics": [
                     ("Total Eventos", zone_metrics["Total Eventos"]),
                     ("Eventos Registrados por el Sistema", zone_metrics["Eventos Registrados por el Sistema"]),
@@ -495,8 +500,55 @@ def build_zone_view_data(results: dict) -> dict:
                     [column for column in zone_overview_columns if column in zone_row.columns],
                 ),
                 "chart": img_data["buffer"],
+                "raw_metrics": zone_metrics
             }
         )
+
+    cameras_dict = {}
+    for z in zones_data:
+        cam_label = z["camera_label"]
+        if cam_label not in cameras_dict:
+            cameras_dict[cam_label] = []
+        cameras_dict[cam_label].append(z)
+
+    cameras = []
+    for index, (cam_label, cam_zones) in enumerate(cameras_dict.items()):
+        summary_rows = []
+        for z in cam_zones:
+            m = z["raw_metrics"]
+            total_eventos = m.get("Total Eventos", 0)
+            reg_sistema = m.get("Eventos Registrados por el Sistema", 0)
+            correct_sistema = m.get("Eventos Correctos del Sistema", 0)
+            no_reg = m.get("Eventos NO Registrados (Manuales)", 0)
+            
+            pct_correct = m.get("% Eventos Correctos sobre Registrados", 0)
+            if pd.isna(pct_correct):
+                pct_correct = 0
+
+            try:
+                x_val = int(round(float(correct_sistema)))
+                y_val = int(round(float(reg_sistema)))
+                pct_val = float(pct_correct)
+                precision_str = f"{x_val} de {y_val} ({pct_val:.2%})"
+            except:
+                precision_str = "0 de 0 (0.00%)"
+
+            summary_rows.append({
+                "Zona": z["label"],
+                "Total eventos": int(round(float(total_eventos))) if pd.notna(total_eventos) else 0,
+                "Eventos registrados por el sistema": int(round(float(reg_sistema))) if pd.notna(reg_sistema) else 0,
+                "Precisión sobre registrados": precision_str,
+                "Eventos no registrados por el sistema": int(round(float(no_reg))) if pd.notna(no_reg) else 0
+            })
+            
+        summary_df = pd.DataFrame(summary_rows)
+        
+        cameras.append({
+            "camera_label": cam_label,
+            "expanded": index == 0,
+            "summary_table": build_display_table(summary_df),
+            "zones": cam_zones
+        })
 
     total_events = results["df_grafico"]["Total Eventos"].sum()
     registered_events = results["df_grafico"]["Eventos Registrados por el Sistema"].sum()
@@ -514,7 +566,7 @@ def build_zone_view_data(results: dict) -> dict:
             [column for column in zone_overview_columns if column in results["df_grafico"].columns],
         ),
         "overview_chart": results["img_global"],
-        "zones": zones,
+        "cameras": cameras,
     }
 
 
