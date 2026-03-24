@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from typing import Iterable
+import unicodedata
 
 import pandas as pd
 
@@ -33,6 +34,18 @@ def calc_pct(part: float, total: float) -> float:
     return (part / total) if total > 0 else 0.0
 
 
+def normalize_text(value) -> str:
+    if value is None or pd.isna(value):
+        return ""
+    text = str(value).strip().lower()
+    text = unicodedata.normalize("NFKD", text)
+    return "".join(char for char in text if not unicodedata.combining(char))
+
+
+def normalize_text_series(series: pd.Series) -> pd.Series:
+    return series.apply(normalize_text)
+
+
 def calculate_group_metrics(group: pd.DataFrame) -> pd.Series:
     identity = get_column(group, ["Identity_ID", "ID_Identidad"])
     event_audit = get_column(group, ["Event_Audit", "Auditoria_Evento"], "mal")
@@ -40,25 +53,40 @@ def calculate_group_metrics(group: pd.DataFrame) -> pd.Series:
     age_audit = get_column(group, ["Age_Audit", "Auditoria_Edad"], "mal")
     gender = get_column(group, ["Gender", "Genero", "Sexo"], "unknown")
     age = get_column(group, ["Age", "Edad"], 0)
+    observation_a = get_column(group, ["Observation_A", "Observacion_A", "Observación_A"], "")
+
+    event_audit_normalized = normalize_text_series(event_audit)
+    gender_audit_normalized = normalize_text_series(gender_audit)
+    age_audit_normalized = normalize_text_series(age_audit)
+    observation_a_normalized = normalize_text_series(observation_a)
+
+    subregister_mask = observation_a_normalized.eq("evento no registrado")
+    registered_mask = ~subregister_mask
 
     total_events = len(group)
-    not_registered = identity.isna().sum() + (identity.astype(str).str.strip() == "").sum()
-    registered = total_events - not_registered
+    not_registered = int(subregister_mask.sum())
+    registered = int(registered_mask.sum())
 
-    correct_events = event_audit.astype(str).str.strip().str.lower().eq("bien").sum()
-    correct_gender = gender_audit.astype(str).str.strip().str.lower().eq("bien").sum()
-    correct_age = age_audit.astype(str).str.strip().str.lower().eq("bien").sum()
+    registered_wrong_mask = event_audit_normalized.eq("mal") & registered_mask
+    registered_wrong = int(registered_wrong_mask.sum())
+    correct_events = registered - registered_wrong
 
-    known_gender = gender.notna() & (gender.astype(str).str.lower() != "unknown")
-    gender_coverage = known_gender.sum()
+    correct_gender = int((gender_audit_normalized.eq("bien") & registered_mask).sum())
+    correct_age = int((age_audit_normalized.eq("bien") & registered_mask).sum())
 
-    numeric_age = pd.to_numeric(age, errors="coerce")
+    registered_gender = gender[registered_mask]
+    registered_identity = identity[registered_mask]
+    registered_age = age[registered_mask]
+
+    known_gender = registered_gender.notna() & (normalize_text_series(registered_gender) != "unknown")
+    gender_coverage = int(known_gender.sum())
+
+    numeric_age = pd.to_numeric(registered_age, errors="coerce")
     known_age = numeric_age.notna() & (numeric_age > 0)
-    age_coverage = known_age.sum()
+    age_coverage = int(known_age.sum())
 
-    identity_unknown = (identity.astype(str).str.lower() == "unknown").sum()
+    identity_unknown = int(normalize_text_series(registered_identity).eq("unknown").sum())
     identity_coverage = registered - identity_unknown
-    registered_wrong = registered - correct_events
 
     return pd.Series(
         {

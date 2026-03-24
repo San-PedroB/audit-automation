@@ -6,17 +6,21 @@ import streamlit as st
 
 from audit_app.infrastructure.charts import make_dual_bar_chart
 
-DEFAULT_CHART_WIDTH = 760
-COMPACT_CHART_WIDTH = 460
+DEFAULT_CHART_WIDTH = 0.72
+COMPACT_CHART_WIDTH = 0.5
 
 
-def render_chart_image(image_data, caption: str | None = None, width: int = DEFAULT_CHART_WIDTH):
+def render_chart_image(image_data, caption: str | None = None, width: float = DEFAULT_CHART_WIDTH):
     if image_data is None:
         return
-    st.image(image_data, caption=caption, width=width)
+    width = min(max(width, 0.2), 1.0)
+    side = max((1.0 - width) / 2, 0.05)
+    left_col, center_col, right_col = st.columns([side, width, side])
+    with center_col:
+        st.image(image_data, caption=caption, use_container_width=True)
 
 
-def render_dual_bar_support_chart(labels, base_values, result_values, title, width: int = DEFAULT_CHART_WIDTH):
+def render_dual_bar_support_chart(labels, base_values, result_values, title, width: float = DEFAULT_CHART_WIDTH):
     chart_bytes = make_dual_bar_chart(
         labels,
         base_values,

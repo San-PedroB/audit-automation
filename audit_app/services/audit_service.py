@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import os
 import re
+import unicodedata
 
 import pandas as pd
 
@@ -15,6 +16,9 @@ VIEW_MODE_INDIVIDUAL = "Auditoria individual"
 VIEW_MODE_DATE = "Consolidado por fecha"
 VIEW_MODE_SUCURSAL = "Consolidado sucursal"
 SENSOR_TYPE_COLUMN = "Tipo_sensor"
+SENSOR_LINE = "Linea_conteo"
+SENSOR_DWELL = "Zona_permanencia"
+SENSOR_UNDEFINED = "No definido"
 
 
 def build_sucursal_dir(base_dir: str, empresa: str, sucursal: str | None) -> str:
@@ -31,6 +35,65 @@ def build_work_dir(base_dir: str, empresa: str, fecha: str, sucursal: str | None
 
 def normalize_time_fragment(fragment: str) -> str:
     return fragment.replace(".", ":")
+
+
+def normalize_text(value) -> str:
+    if value is None or pd.isna(value):
+        return ""
+    text = str(value).strip().lower()
+    text = unicodedata.normalize("NFKD", text)
+    return "".join(char for char in text if not unicodedata.combining(char))
+
+
+def infer_sensor_type_from_zone(zone_name) -> str:
+    normalized_zone = normalize_text(zone_name)
+    if not normalized_zone:
+        return SENSOR_UNDEFINED
+
+    line_patterns = [
+        "entrada",
+        "exterior",
+        "trafico",
+        "linea",
+        "acceso",
+        "salida",
+    ]
+    if any(pattern in normalized_zone for pattern in line_patterns):
+        return SENSOR_LINE
+    return SENSOR_DWELL
+
+
+def populate_sensor_type_column(dataframe: pd.DataFrame) -> pd.DataFrame:
+    normalized_df = dataframe.copy()
+    zone_series = None
+    for candidate in ["Zona_name", "Zona", "Nombre_zona"]:
+        if candidate in normalized_df.columns:
+            zone_series = normalized_df[candidate]
+            break
+
+    if SENSOR_TYPE_COLUMN not in normalized_df.columns:
+        if zone_series is not None:
+            normalized_df[SENSOR_TYPE_COLUMN] = zone_series.apply(infer_sensor_type_from_zone)
+        else:
+            normalized_df[SENSOR_TYPE_COLUMN] = SENSOR_UNDEFINED
+        return normalized_df
+
+    normalized_df[SENSOR_TYPE_COLUMN] = (
+        normalized_df[SENSOR_TYPE_COLUMN]
+        .fillna(SENSOR_UNDEFINED)
+        .astype(str)
+        .str.strip()
+        .replace("", SENSOR_UNDEFINED)
+    )
+
+    if zone_series is not None:
+        missing_mask = normalized_df[SENSOR_TYPE_COLUMN].eq(SENSOR_UNDEFINED)
+        if missing_mask.any():
+            normalized_df.loc[missing_mask, SENSOR_TYPE_COLUMN] = zone_series[missing_mask].apply(
+                infer_sensor_type_from_zone
+            )
+
+    return normalized_df
 
 
 def parse_time_window_from_filename(filename: str) -> tuple[str, str]:
@@ -106,16 +169,7 @@ def load_audit_csv(input_file_path: str) -> tuple[pd.DataFrame | None, str | Non
         if unnamed_columns:
             dataframe = dataframe.drop(columns=unnamed_columns)
 
-        if SENSOR_TYPE_COLUMN not in dataframe.columns:
-            dataframe[SENSOR_TYPE_COLUMN] = "No definido"
-        else:
-            dataframe[SENSOR_TYPE_COLUMN] = (
-                dataframe[SENSOR_TYPE_COLUMN]
-                .fillna("No definido")
-                .astype(str)
-                .str.strip()
-                .replace("", "No definido")
-            )
+        dataframe = populate_sensor_type_column(dataframe)
 
         return dataframe, None
     except Exception as exc:

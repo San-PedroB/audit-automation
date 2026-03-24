@@ -33,8 +33,8 @@ def make_dual_bar_chart(
     half = bar_width / 2 + bar_gap / 2
     count = len(labels)
 
-    fig_w = max(6, min(16, 3.0 + count * 1.5))
-    fig, ax = plt.subplots(figsize=(fig_w, 6))
+    fig_w = max(8, min(18, 4.5 + count * 1.65))
+    fig, ax = plt.subplots(figsize=(fig_w, 6.8))
     fig.patch.set_facecolor("white")
 
     base_heights = [100.0 for _ in range(count)]
@@ -92,13 +92,13 @@ def make_dual_bar_chart(
 
     plt.tight_layout()
     buffer = io.BytesIO()
-    plt.savefig(buffer, format="png", dpi=110, bbox_inches="tight")
+    plt.savefig(buffer, format="png", dpi=220, bbox_inches="tight")
     plt.close(fig)
     return buffer.getvalue()
 
 
 def make_summary_bar_chart(labels, values, title, colors):
-    fig, ax = plt.subplots(figsize=(8, 6))
+    fig, ax = plt.subplots(figsize=(9.5, 6.8))
     fig.patch.set_facecolor("white")
 
     wrapped_labels = [textwrap.fill(label, width=18) for label in labels]
@@ -133,7 +133,7 @@ def make_summary_bar_chart(labels, values, title, colors):
 
     plt.tight_layout()
     buffer = io.BytesIO()
-    plt.savefig(buffer, format="png", dpi=120, bbox_inches="tight")
+    plt.savefig(buffer, format="png", dpi=220, bbox_inches="tight")
     plt.close(fig)
     return buffer.getvalue()
 
