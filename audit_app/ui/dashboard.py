@@ -23,6 +23,7 @@ from audit_app.ui.components.metrics import format_metric_value
 from audit_app.ui.views.camera_view import render_camera_tab
 from audit_app.ui.views.global_view import render_global_and_data_tab
 from audit_app.ui.views.unknowns_view import render_unknowns_tab
+from audit_app.ui.views.report_data_view import render_report_data_tab
 from audit_app.ui.views.zone_view import render_zone_tab
 
 
@@ -249,8 +250,9 @@ def render_dashboard_views(results: dict):
     )
     st.markdown("### Analisis Visual")
 
-    tab1, tab2, tab3, tab4 = st.tabs(
+    tab1, tab2, tab3, tab4, tab5 = st.tabs(
         [
+            "Data Informe",
             "Analisis Global",
             "Detalle por Camara",
             "Analisis de Unknowns",
@@ -259,12 +261,14 @@ def render_dashboard_views(results: dict):
     )
 
     with tab1:
-        render_global_and_data_tab(results["reporte"], view_models["global"], view_models["dates"])
+        render_report_data_tab(results)
     with tab2:
-        render_camera_tab(view_models["camera"])
+        render_global_and_data_tab(results["reporte"], view_models["global"], view_models["dates"])
     with tab3:
-        render_unknowns_tab(view_models["unknowns"])
+        render_camera_tab(view_models["camera"])
     with tab4:
+        render_unknowns_tab(view_models["unknowns"])
+    with tab5:
         render_zone_tab(view_models["zone"])
 
 

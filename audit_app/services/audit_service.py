@@ -334,6 +334,9 @@ def process_audit_data(
     )
 
     return {
+        "empresa": empresa,
+        "sucursal": sucursal or "",
+        "fecha_selected": fecha or "",
         "reporte": reporte,
         "df_grafico": df_grafico,
         "df_total": df_total,

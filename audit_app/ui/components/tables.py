@@ -38,11 +38,11 @@ def prepare_display_dataframe(dataframe: pd.DataFrame, columns: list[str] | None
 
     for column in display_df.columns:
         if str(column).startswith("%"):
-            display_df[column] = pd.to_numeric(display_df[column], errors="coerce").fillna(0.0)
-            formatters[column] = "{:.2%}"
+            display_df[column] = pd.to_numeric(display_df[column], errors="coerce")
+            formatters[column] = lambda value: "N/A" if pd.isna(value) else f"{float(value):.2%}"
         elif column in COUNT_COLUMNS:
-            display_df[column] = pd.to_numeric(display_df[column], errors="coerce").fillna(0.0)
-            formatters[column] = "{:.0f}"
+            display_df[column] = pd.to_numeric(display_df[column], errors="coerce")
+            formatters[column] = lambda value: "N/A" if pd.isna(value) else f"{float(value):.0f}"
 
     return display_df, formatters
 
@@ -70,11 +70,11 @@ def render_complete_master_table(final_df: pd.DataFrame):
 
     for column in ordered_columns:
         if str(column).startswith("%"):
-            complete_df[column] = pd.to_numeric(complete_df[column], errors="coerce").fillna(0.0)
-            base_formatters[column] = "{:.2%}"
+            complete_df[column] = pd.to_numeric(complete_df[column], errors="coerce")
+            base_formatters[column] = lambda value: "N/A" if pd.isna(value) else f"{float(value):.2%}"
         elif column in COUNT_COLUMNS:
-            complete_df[column] = pd.to_numeric(complete_df[column], errors="coerce").fillna(0.0)
-            base_formatters[column] = "{:.0f}"
+            complete_df[column] = pd.to_numeric(complete_df[column], errors="coerce")
+            base_formatters[column] = lambda value: "N/A" if pd.isna(value) else f"{float(value):.0f}"
 
     section_lookup = build_section_lookup()
     multi_columns = [(section_lookup.get(column, "Otros"), column) for column in ordered_columns]

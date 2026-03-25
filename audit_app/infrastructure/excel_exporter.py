@@ -10,27 +10,29 @@ import pandas as pd
 from openpyxl.drawing.image import Image as XLImage
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 
-from audit_app.domain.kpi_schema import COUNT_COLUMNS, KPI_COLUMNS
+from audit_app.domain.kpi_schema import COUNT_COLUMNS, EVENT_PRECISION_PCT, KPI_COLUMNS
 
 
 def _write_df_to_ws(ws, df: pd.DataFrame, start_row: int, start_col: int):
     if df is None or df.empty:
         return
+
     from openpyxl.utils.dataframe import dataframe_to_rows
-    
+
     thin_border = Border(
-        left=Side(style="thin"), right=Side(style="thin"),
-        top=Side(style="thin"), bottom=Side(style="thin")
+        left=Side(style="thin"),
+        right=Side(style="thin"),
+        top=Side(style="thin"),
+        bottom=Side(style="thin"),
     )
     header_fill = PatternFill(start_color="1B2A4A", end_color="1B2A4A", fill_type="solid")
     header_font = Font(color="FFFFFF", bold=True)
-    
-    # Fill empty columns or convert arrays to strings if needed
+
     clean_df = df.copy()
     for col in clean_df.columns:
         if str(col).startswith("%"):
-            clean_df[col] = pd.to_numeric(clean_df[col], errors="coerce").fillna(0.0)
-            
+            clean_df[col] = pd.to_numeric(clean_df[col], errors="coerce")
+
     rows = list(dataframe_to_rows(clean_df, index=False, header=True))
     for r_idx, row_data in enumerate(rows):
         for c_idx, value in enumerate(row_data):
@@ -40,8 +42,7 @@ def _write_df_to_ws(ws, df: pd.DataFrame, start_row: int, start_col: int):
                 cell.fill = header_fill
                 cell.font = header_font
             cell.alignment = Alignment(horizontal="center", vertical="center")
-            
-            # Format percentages
+
             if r_idx > 0 and isinstance(clean_df.columns[c_idx], str) and clean_df.columns[c_idx].startswith("%"):
                 cell.number_format = "0.00%"
 
@@ -49,31 +50,33 @@ def _write_df_to_ws(ws, df: pd.DataFrame, start_row: int, start_col: int):
 def _format_summary_df(df_source: pd.DataFrame) -> pd.DataFrame:
     if df_source is None or df_source.empty:
         return pd.DataFrame()
-        
+
     summary_rows = []
     for _, row in df_source.iterrows():
         total_eventos = float(row.get("Total Eventos", 0)) if pd.notna(row.get("Total Eventos")) else 0
         reg_sistema = float(row.get("Eventos Registrados por el Sistema", 0)) if pd.notna(row.get("Eventos Registrados por el Sistema")) else 0
         correct_sistema = float(row.get("Eventos Correctos del Sistema", 0)) if pd.notna(row.get("Eventos Correctos del Sistema")) else 0
         no_reg = float(row.get("Eventos NO Registrados (Manuales)", 0)) if pd.notna(row.get("Eventos NO Registrados (Manuales)")) else 0
-        
-        pct_correct = row.get("% Eventos Correctos sobre Registrados", 0)
+
+        pct_correct = row.get(EVENT_PRECISION_PCT, 0)
         pct_correct = float(pct_correct) if pd.notna(pct_correct) else 0.0
 
         try:
             x_val = int(round(correct_sistema))
-            y_val = int(round(reg_sistema))
+            y_val = int(round(total_eventos))
             precision_str = f"{x_val} de {y_val} ({pct_correct:.2%})"
         except Exception:
             precision_str = "0 de 0 (0.00%)"
-            
-        summary_rows.append({
-            "Zona": row.get("Zona", "Desconocida"),
-            "Total eventos": int(round(total_eventos)),
-            "Eventos registrados por el sistema": int(round(reg_sistema)),
-            "Precisión sobre registrados": precision_str,
-            "Eventos no registrados por el sistema": int(round(no_reg))
-        })
+
+        summary_rows.append(
+            {
+                "Zona": row.get("Zona", "Desconocida"),
+                "Total eventos": int(round(total_eventos)),
+                "Eventos registrados por el sistema": int(round(reg_sistema)),
+                "Precision de eventos": precision_str,
+                "Eventos no registrados por el sistema": int(round(no_reg)),
+            }
+        )
     return pd.DataFrame(summary_rows)
 
 
@@ -113,6 +116,7 @@ def export_audit_report(
 
     for column_index in range(1, len(KPI_COLUMNS) + 1):
         cell = worksheet.cell(row=2, column=column_index)
+        cell.value = KPI_COLUMNS[column_index - 1]
         cell.font = header_font
         cell.alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
         cell.border = thin_border
@@ -131,15 +135,15 @@ def export_audit_report(
 
             if isinstance(column_name, str) and column_name.startswith("%"):
                 try:
-                    cell.value = float(value) if value not in (None, "", "N/A") else 0
+                    cell.value = float(value) if value not in (None, "", "N/A") and pd.notna(value) else None
                 except Exception:
-                    cell.value = 0
+                    cell.value = None
                 cell.number_format = "0.00%"
             elif column_name in COUNT_COLUMNS:
                 try:
-                    cell.value = int(float(value)) if value not in (None, "", "N/A") else 0
+                    cell.value = int(float(value)) if value not in (None, "", "N/A") and pd.notna(value) else None
                 except Exception:
-                    cell.value = 0
+                    cell.value = None
                 cell.number_format = "0"
             elif column_name == "Tipo_sensor":
                 cell.value = str(value) if value is not None else ""
@@ -159,7 +163,7 @@ def export_audit_report(
     ws_graphs.add_image(XLImage(io.BytesIO(chart_payloads["img_global_bytes"])), "B2")
     if df_grafico is not None:
         _write_df_to_ws(ws_graphs, df_grafico, 2, 12)
-        
+
     if chart_payloads["img_totales_bytes"]:
         ws_graphs.add_image(XLImage(io.BytesIO(chart_payloads["img_totales_bytes"])), "B30")
         if df_total is not None:
@@ -177,15 +181,16 @@ def export_audit_report(
             cursor += 25
 
         ws_camera.add_image(XLImage(io.BytesIO(img_obj["bytes"])), f"B{cursor}")
-        
+
         if df_grafico is not None:
-            # We match by looking up "General" mappings back to missing values or exact matches.
-            # Simplified matching using the raw df_grafico filtered by format logic
             def format_cam(val):
-                if val in ("", "nan", None): return "General"
-                try: return f"Camara {int(val)}"
-                except: return f"Camara {val}"
-            
+                if val in ("", "nan", None):
+                    return "General"
+                try:
+                    return f"Camara {int(val)}"
+                except Exception:
+                    return f"Camara {val}"
+
             cam_df = df_grafico[df_grafico[CAMERA_COLUMN].apply(format_cam) == cam_label]
             _write_df_to_ws(ws_camera, _format_summary_df(cam_df), cursor, 24)
 
@@ -201,7 +206,7 @@ def export_audit_report(
     for img_obj in chart_payloads["zone_images"]:
         zone_name = img_obj["label"]
         ws_zone.add_image(XLImage(io.BytesIO(img_obj["bytes"])), f"B{cursor}")
-        
+
         if df_grafico is not None:
             zone_df = df_grafico[df_grafico["Zona"].astype(str) == zone_name].copy()
             _write_df_to_ws(ws_zone, _format_summary_df(zone_df), cursor, 12)
@@ -209,8 +214,9 @@ def export_audit_report(
         cursor += 25
 
     ws_unknown = workbook.create_sheet("Analisis de Unknowns")
-    ws_unknown.add_image(XLImage(io.BytesIO(chart_payloads["img_unknown_global_bytes"])), "B2")
-    
+    if chart_payloads["img_unknown_global_bytes"]:
+        ws_unknown.add_image(XLImage(io.BytesIO(chart_payloads["img_unknown_global_bytes"])), "B2")
+
     if df_total is not None:
         unknown_cols = ["Zona", "Eventos Registrados por el Sistema", "Identity Unknown", "% Identity Unknown"]
         avail_u_cols = [c for c in unknown_cols if c in df_total.columns]
@@ -221,13 +227,13 @@ def export_audit_report(
     for img_obj in chart_payloads["unknown_images"]:
         zone_name = img_obj["label"]
         ws_unknown.add_image(XLImage(io.BytesIO(img_obj["bytes"])), f"B{cursor}")
-        
+
         if df_grafico is not None:
             zone_u_df = df_grafico[df_grafico["Zona"].astype(str) == zone_name].copy()
             avail_u_cols = [c for c in unknown_cols if c in zone_u_df.columns]
             if avail_u_cols:
                 _write_df_to_ws(ws_unknown, zone_u_df[avail_u_cols], cursor, 12)
-        
+
         cursor += 25
 
     workbook.save(output_filename)

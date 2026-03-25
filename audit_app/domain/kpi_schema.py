@@ -7,6 +7,9 @@ GENDER_PRECISION = "Precisi\u00f3n de G\u00e9nero"
 GENDER_PRECISION_PCT = "% Precisi\u00f3n de G\u00e9nero"
 AGE_PRECISION = "Precisi\u00f3n de Edad"
 AGE_PRECISION_PCT = "% Precisi\u00f3n de Edad"
+EVENT_PRECISION_PCT = "% Precisi\u00f3n de Eventos"
+BAD_EVENTS = "Eventos Malos del Sistema"
+BAD_EVENTS_PCT = "% Eventos Malos sobre Total"
 
 KPI_COLUMNS = [
     "Zona",
@@ -20,10 +23,10 @@ KPI_COLUMNS = [
     "Eventos NO Registrados (Manuales)",
     "% Eventos NO Registrados (Manuales)",
     "Eventos Correctos del Sistema",
+    EVENT_PRECISION_PCT,
     "% Eventos Correctos sobre Registrados",
-    "% Eventos Correctos sobre Total",
-    "Eventos Reg. Mal (Sist.)",
-    "% Eventos Reg. Mal sobre Registrados",
+    BAD_EVENTS,
+    BAD_EVENTS_PCT,
     "Cobertura Identity",
     "% Cobertura Identity",
     "Identity Unknown",
@@ -44,9 +47,9 @@ COUNT_COLUMNS = [
     "Eventos Registrados por el Sistema",
     "Eventos NO Registrados (Manuales)",
     "Eventos Correctos del Sistema",
+    BAD_EVENTS,
     GENDER_PRECISION,
     AGE_PRECISION,
-    "Eventos Reg. Mal (Sist.)",
     "Identity Unknown",
     GENDER_COVERAGE,
     "Cobertura Edad",
@@ -56,8 +59,8 @@ COUNT_COLUMNS = [
 TOP_METRIC_COLUMNS = [
     "Total Eventos",
     "Eventos Registrados por el Sistema",
-    "% Eventos Correctos sobre Registrados",
-    "Eventos Reg. Mal (Sist.)",
+    EVENT_PRECISION_PCT,
+    BAD_EVENTS,
     "Eventos NO Registrados (Manuales)",
 ]
 
@@ -65,18 +68,18 @@ GLOBAL_SUMMARY_COLUMNS = [
     "Zona",
     "Total Eventos",
     "Eventos Correctos del Sistema",
+    EVENT_PRECISION_PCT,
     "% Eventos Correctos sobre Registrados",
-    "% Eventos Correctos sobre Total",
-    "Eventos Reg. Mal (Sist.)",
-    "% Eventos Reg. Mal sobre Registrados",
+    BAD_EVENTS,
+    BAD_EVENTS_PCT,
 ]
 
 TOTAL_SUMMARY_COLUMNS = [
     "Total Eventos",
     "% Eventos Registrados por el Sistema",
+    EVENT_PRECISION_PCT,
     "% Eventos Correctos sobre Registrados",
-    "% Eventos Correctos sobre Total",
-    "% Eventos Reg. Mal sobre Registrados",
+    BAD_EVENTS_PCT,
     "% Eventos NO Registrados (Manuales)",
 ]
 
@@ -86,10 +89,10 @@ CAMERA_SUMMARY_COLUMNS = [
     "Total Eventos",
     "Eventos Registrados por el Sistema",
     "Eventos Correctos del Sistema",
+    EVENT_PRECISION_PCT,
     "% Eventos Correctos sobre Registrados",
-    "% Eventos Correctos sobre Total",
-    "Eventos Reg. Mal (Sist.)",
-    "% Eventos Reg. Mal sobre Registrados",
+    BAD_EVENTS,
+    BAD_EVENTS_PCT,
     "% Cobertura Identity",
 ]
 
@@ -110,10 +113,10 @@ DATA_TABLE_SECTIONS = {
         "Eventos NO Registrados (Manuales)",
         "% Eventos NO Registrados (Manuales)",
         "Eventos Correctos del Sistema",
+        EVENT_PRECISION_PCT,
         "% Eventos Correctos sobre Registrados",
-        "% Eventos Correctos sobre Total",
-        "Eventos Reg. Mal (Sist.)",
-        "% Eventos Reg. Mal sobre Registrados",
+        BAD_EVENTS,
+        BAD_EVENTS_PCT,
     ],
     "Identity": [
         "Zona",

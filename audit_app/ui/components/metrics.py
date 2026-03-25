@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import pandas as pd
 import streamlit as st
 
 
@@ -15,6 +16,8 @@ def format_camera_label(cam_value):
 
 
 def format_metric_value(column_name: str, value) -> str:
+    if pd.isna(value):
+        return "N/A"
     if column_name.startswith("%"):
         return f"{float(value):.2%}"
     return f"{int(float(value))}"

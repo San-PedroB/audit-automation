@@ -243,23 +243,33 @@ def build_chart_payloads(df_grafico: pd.DataFrame, df_total: pd.DataFrame) -> di
         )
         zone_images.append({"label": zone_name, "buffer": io.BytesIO(zone_bytes), "bytes": zone_bytes})
 
-    total_registered = df_total.iloc[0]["Eventos Registrados por el Sistema"]
-    total_unknown = df_total.iloc[0]["Identity Unknown"]
-    unknown_global_bytes = make_dual_bar_chart(
-        ["TOTAL SITIO"],
-        [total_registered],
-        [total_unknown],
-        "Identity Unknown - Resumen Global",
-        "Eventos Registrados por el Sistema",
-        "Identity Unknown",
-    )
-    img_unknown_global = io.BytesIO(unknown_global_bytes)
+    unknown_global_bytes = None
+    img_unknown_global = None
+    total_identity_coverage = pd.to_numeric(pd.Series([df_total.iloc[0]["Cobertura Identity"]]), errors="coerce").iloc[0]
+    total_unknown = pd.to_numeric(pd.Series([df_total.iloc[0]["Identity Unknown"]]), errors="coerce").iloc[0]
+    if pd.notna(total_identity_coverage) or pd.notna(total_unknown):
+        total_registered_for_identity = (0 if pd.isna(total_identity_coverage) else total_identity_coverage) + (
+            0 if pd.isna(total_unknown) else total_unknown
+        )
+        unknown_global_bytes = make_dual_bar_chart(
+            ["TOTAL SITIO"],
+            [total_registered_for_identity],
+            [0 if pd.isna(total_unknown) else total_unknown],
+            "Identity Unknown - Resumen Global",
+            "Eventos evaluables",
+            "Identity Unknown",
+        )
+        img_unknown_global = io.BytesIO(unknown_global_bytes)
 
     unknown_images = []
     for _, row in df_grafico.iterrows():
+        if pd.isna(row["% Identity Unknown"]):
+            continue
         zone_name = str(row["Zona"])
-        registered_zone = [to_num(pd.Series([row["Eventos Registrados por el Sistema"]])).iloc[0]]
-        unknown_zone = [to_num(pd.Series([row["Identity Unknown"]])).iloc[0]]
+        registered_zone = [
+            to_num(pd.Series([(row["Cobertura Identity"] if pd.notna(row["Cobertura Identity"]) else 0) + (row["Identity Unknown"] if pd.notna(row["Identity Unknown"]) else 0)])).iloc[0]
+        ]
+        unknown_zone = [to_num(pd.Series([row["Identity Unknown"] if pd.notna(row["Identity Unknown"]) else 0])).iloc[0]]
         if registered_zone[0] <= 0:
             continue
         unknown_bytes = make_dual_bar_chart(
@@ -267,7 +277,7 @@ def build_chart_payloads(df_grafico: pd.DataFrame, df_total: pd.DataFrame) -> di
             registered_zone,
             unknown_zone,
             f"Identity Unknown - {zone_name}",
-            "Eventos Registrados por el Sistema",
+            "Eventos evaluables",
             "Identity Unknown",
         )
         unknown_images.append(

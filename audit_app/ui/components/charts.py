@@ -21,12 +21,32 @@ def render_chart_image(image_data, caption: str | None = None, width: float = DE
 
 
 def render_dual_bar_support_chart(labels, base_values, result_values, title, width: float = DEFAULT_CHART_WIDTH):
-    chart_bytes = make_dual_bar_chart(
+    render_generic_dual_bar_support_chart(
         labels,
         base_values,
         result_values,
         title,
         "Total Eventos",
         "Eventos Correctos del Sistema",
+        width=width,
+    )
+
+
+def render_generic_dual_bar_support_chart(
+    labels,
+    base_values,
+    result_values,
+    title,
+    label_base,
+    label_result,
+    width: float = DEFAULT_CHART_WIDTH,
+):
+    chart_bytes = make_dual_bar_chart(
+        labels,
+        base_values,
+        result_values,
+        title,
+        label_base,
+        label_result,
     )
     render_chart_image(chart_bytes, width=width)
